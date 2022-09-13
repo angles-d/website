@@ -1,9 +1,3 @@
-/**
-* Template Name: MyPortfolio - v4.8.0
-* Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -76,11 +70,9 @@ body {
   }
 
   .square {
-    text-align: center;
-    border: solid;
+    border: none;
     display: block;
     margin-bottom: 30px;
-    color:rgba(255, 200, 0, 0.825)
   }
   
   .square .square-wrap {
@@ -108,7 +100,7 @@ body {
     transform: scale(1);
   }
   
-  .square .square-wrap>.work-info {
+  .square .square-wrap>.info {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -121,13 +113,20 @@ body {
     margin-top: 20px;
     transition: 0.3s all ease;
   }
+
+  .nav-bar a{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
   
-  .square .square-wrap>.work-info h3 {
+  .square .square-wrap>.info h3 {
     font-size: 20px;
     margin-bottom: 0;
   }
   
-  .square .square-wrap>.work-info span {
+  .square .square-wrap>.info span {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -138,7 +137,7 @@ body {
   }
   
   .square .square-wrap:hover img {
-    transform: scale(1.05);
+    transform: scale(1.00);
   }
   
   .square .square-wrap:hover:after {
@@ -146,7 +145,7 @@ body {
     visibility: visible;
   }
   
-  .square .square-wrap:hover .work-info {
+  .square .square-wrap:hover .info {
     margin-top: 0px;
     opacity: 1;
     visibility: visible;
@@ -208,22 +207,6 @@ body {
     background: #000;
   }
   
-  .testimonials-slider .swiper-pagination {
-    margin-top: -60px;
-    position: relative;
-  }
-  
-  .testimonials-slider .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(13, 30, 45, 0.3);
-    opacity: 1;
-  }
-  
-  .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: rgba(13, 30, 45, 0.6);
-  }
-  
   .sticky-content {
     position: sticky;
     position: -webkit-sticky;
@@ -272,57 +255,7 @@ body {
     background: #000;
   }
   
-  /* Services */
-  .services i {
-    font-size: 40px;
-  }
   
-  .services h4 {
-    padding-top: 10px;
-  }
-  
-  /* Contact Form */
-  .php-email-form .error-message {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-  }
-  
-  .php-email-form .error-message br+br {
-    margin-top: 25px;
-  }
-  
-  .php-email-form .sent-message {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-  }
-  
-  .php-email-form .loading {
-    display: none;
-    background: #fff;
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #18d26e;
-    border-top-color: #eee;
-    -webkit-animation: animate-loading 1s linear infinite;
-    animation: animate-loading 1s linear infinite;
-  }
   
   @-webkit-keyframes animate-loading {
     0% {
@@ -344,173 +277,4 @@ body {
     }
   }
   
-  /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  /* Custom Navmenu */
-  .custom-navmenu {
-    background: #0d1e2d;
-  }
-  
-  .custom-navmenu .custom-menu,
-  .custom-navmenu .custom-menu li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .custom-navmenu .custom-menu li {
-    margin-bottom: 0;
-    font-size: 20px;
-  }
-  
-  .custom-navmenu .custom-menu li a {
-    color: #fff;
-    padding: 10px 0 !important;
-  }
-  
-  .custom-navmenu .custom-menu li a:hover {
-    text-decoration: none;
-  }
-  
-  .custom-navmenu .custom-menu li.active a {
-    text-decoration: underline;
-  }
-  
-  .custom-navmenu h3 {
-    font-size: 20px;
-    color: #fff;
-  }
-  
-  .custom-navmenu p {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .custom-navmenu a {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .custom-navmenu a:hover {
-    color: #fff;
-  }
-  
-  /* Custom Navbar */
-  .custom-navbar {
-    padding-top: 50px;
-    width: 100%;
-  }
-  
-  @media (max-width: 780px) {
-    .custom-navbar>.container {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-  
-  .custom-navbar .navbar-brand {
-    font-size: 1.7rem;
-  }
-  
-  /* Burger */
-  .burger {
-    width: 28px;
-    height: 32px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .burger:before,
-  .burger span,
-  .burger:after {
-    width: 100%;
-    height: 2px;
-    display: block;
-    background: #000;
-    border-radius: 2px;
-    position: absolute;
-    opacity: 1;
-  }
-  
-  .burger:before,
-  .burger:after {
-    transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
-    -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
-    content: "";
-  }
-  
-  .burger:before {
-    top: 4px;
-  }
-  
-  .burger span {
-    top: 15px;
-  }
-  
-  .burger:after {
-    top: 26px;
-  }
-  
-  /* Hover */
-  .burger:hover:before {
-    top: 7px;
-  }
-  
-  .burger:hover:after {
-    top: 23px;
-  }
-  
-  /* Click */
-  .burger.active span {
-    opacity: 0;
-  }
-  
-  .burger.active:before,
-  .burger.active:after {
-    top: 40%;
-  }
-  
-  .burger.active:before {
-    transform: rotate(45deg);
-  }
-  
-  .burger.active:after {
-    transform: rotate(-45deg);
-  }
-  
-  .burger:focus {
-    outline: none;
-  }
-  
-  /*--------------------------------------------------------------
-  # Footer
-  --------------------------------------------------------------*/
-  .footer {
-    padding: 0 0 4rem 0;
-  }
-  
-  .footer a {
-    color: #000;
-  }
-  
-  .social a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #f8f9fa;
-    position: relative;
-    text-align: center;
-    color: #0d1e2d;
-  }
-  
-  .social a span {
-    display: inline-block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .social a:hover {
-    color: #000;
-  }
+ 
