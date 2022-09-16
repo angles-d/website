@@ -1,9 +1,16 @@
 <?php
+$first_name = ""; 
+$last_name = ""; 
+$email = ""; 
+$message = ""; 
+$error = false;
+
 if (isset($_POST["Submit"])) {
 
-    // EDIT THE FOLLOWING TWO LINES:
-    $email_to = "adai24@gatech.edu";
-    $email_subject = "Contact from website";
+    $first_name = $_POST["First_name"]; // required
+    $last_name = $_POST["Last_name"]; // required
+    $email = $_POST["Email"]; // required
+    $message = $_POST["Message"]; // required
 
     function problem($error)
     {
@@ -24,15 +31,9 @@ if (isset($_POST["Submit"])) {
         problem("We're sorry, but there appears to be a problem with the form you submitted.");
     }
 
-    $first_name = $_POST["First Name"]; // required
-    $last_name = $_POST["Last Name"]; // required
-    $email = $_POST["Email"]; // required
-    $message = $_POST["Message"]; // required
 
     $error_message = "";
-    $email_exp = "/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/";
-
-    if (!preg_match($email_exp, $email)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error_message .= "The Email address you entered does not appear to be valid.<br>";
     }
 
@@ -66,14 +67,16 @@ if (isset($_POST["Submit"])) {
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
+    $email_to = "adai24@gatech.edu";
+    $email_subject = "Contact from website";
+
     // create email headers
     $headers = "From: " . $email . "\r\n" .
         "Reply-To: " . $email . "\r\n" .
         "X-Mailer: PHP/" . phpversion();
     mail($email_to, $email_subject, $email_message, $headers);
+    echo "<br/>Subject: ".$email_subject."<br/><hr><br/>".$email_message;  
 ?>
-
-    <!-- INCLUDE YOUR SUCCESS MESSAGE BELOW -->
 
     Thanks for getting in touch. We"ll get back to you soon.
 
