@@ -16,7 +16,8 @@ if (isset($_POST["Email"])) {
 
     // validation expected data exists
     if (
-        !isset($_POST["Name"]) ||
+        !isset($_POST["First Name"]) ||
+        !isset($_POST["Last Name"]) ||
         !isset($_POST["Email"]) ||
         !isset($_POST["Message"])
     ) {

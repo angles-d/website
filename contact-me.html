@@ -22,41 +22,57 @@
             <div class="col-6 offset-6 text-start text-lg-end  justify-content-end nav-bar  d-flex">
                 <a href="/../index.html" class="pl-4">Home</a>
                 <a href="/../index.html#projects" class="pl-4">Projects</a>
+                <a href="/about-me.html" class=" pl-4">About</a>
                 <a href="/contact-me.html" class="pl-4">Contact</a>
-                <a href="#about" class=" pl-4">About Me</a>
             </div>
         </div>
         <div class="mt-5 mb-5 row"></div>
-
         <div class="row">
-            <div class="mt-5 mb-5 row"></div>
             <div class="col-3 offset-1">
                 <h1>Get in touch!</h1>
             </div>
-            <div class="col-6">
-                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-                    <label for="Name" class="fcf-label">Name:</label>
-                    <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                    </div>
-                    <div class="fcf-form-group">
-                        <label for="Email" class="fcf-label">Email address</label>
-                        <div class="fcf-input-group">
-                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+        </div>
+
+        <div class="row">
+            <div class="col-8 offset-5">
+                <form id="fcf-form-id"  method="post" action="contact-form-process.php">
+                    <div class="row mb-1">
+                        <div class="col-4 mr-1">
+                            <label for="First Name" >First Name</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="first-name" name="first-name" class="fcf-form-control" required>
+                            </div>
                         </div>
-                        <div class="fcf-form-group">
-                            <label for="Message" class="fcf-label">Message</label>
+                        <div class="col-4 mb-3">
+                            <label for="Last Name">Last Name</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="last-ame" name="last-name" class="fcf-form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-8 fcf-form-group">
+                            <label for="Email">Email address</label>
+                            <div class="fcf-input-group mb-3 pr-5">
+                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 fcf-form-group mb-4">
+                            <label for="Message">Message</label>
                             <div class="fcf-input-group">
                                 <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
                                     required></textarea>
                             </div>
                         </div>
-                        <div class="fcf-form-group">
-                            <button type="submit" class="readmore"
-                                class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-                        </div>
                     </div>
-                </form>
+                    <div class="fcf-form-group">
+                        <button type="submit"
+                            class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block readmore">Send</button>
+                    </div>
+                 </form>
             </div>
         </div>
     </div>
