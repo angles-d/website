@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST["Email"])) {
+if (isset($_POST["Submit"])) {
 
     // EDIT THE FOLLOWING TWO LINES:
     $email_to = "adai24@gatech.edu";
