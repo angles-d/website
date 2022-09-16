@@ -38,7 +38,8 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-4">
-                    <h1 class="mb-1">The McCloud <br>Pyramid</h1>
+                    <h1 class="mb-2">The McCloud <br>Pyramid</h1>
+                    <h5>2020</h5>
                     <p class="mb-4">VR | JS, Three.js, Blender</p>
                     <p><a href="https://github.com/aelatgt/GCG" class="readmore">Github</a></p>
                 </div>
@@ -52,23 +53,35 @@
                                 meaning in Mozilla's virtual environment, hubs.
                             </p>
 
-                            <p>The three forms of meaning within the pyramid: text, reality, and abstract. To represent
+                            <p class="mb-0">The three forms of meaning within the pyramid: text, reality, and abstract. The forms of
+                                meaning can blend together creating intermediate forms of reality. To represent
                                 these forms we use a face as the base object. As the user moves across the room, the
                                 face model morphs from one form of meaning to the other with each corner representing a
                                 form of reality.
                             </p>
-                            
-                            <div class="col-6">
-                                <img class="img-fluid mt-0 mb-2" src="/img/mccloud/tri.gif">
+
+                            <div class="d-flex justify-content-center">
+                                <img class="col-9  mb-4 img-fluid" src="/img/mccloud/meaning-map.png">
+                                <!-- <img class="col-6 mb-4" id = "mirror" src="/img/mccloud/mirror.gif"> -->
                             </div>
-                        
+
                             <p>
                                 For instance, if the user starts at "abstract" they are faced with the a sphere as they
                                 transition towards the corner for "reality" the model slowly morphs into a realistic
                                 face. This progression was achieved creating the transition with shapekeys in Blender
-                                then using morph targets in Three.js to perform the realtime morphing.
+                                then using morph-targets in Three.js to perform the realtime morphing.
                             </p>
-                            <img class="img-fluid mt-0 mb-2 pl-4 pr-4" src="/img/mccloud/morphing.gif">
+                            <div class="d-flex justify-content-center">
+                                <img class="mt-2 mb-4" src="/img/mccloud/morphing.gif">
+                            </div>
+                            <p>
+                                As the project progressed, additional intermediate steps were added into the path to better reflect McCloud's "Big Triangle". For instance, in the transition from text to reality, intermediate models such as emoticons and emojis were added between the starting word "face" and the final realistic face.
+                            </p>
+
+                            <div class="d-flex justify-content-center">
+                                <img class="mb-4" id = "mirror" src="/img/mccloud/mirror.gif">
+                            </div>
+
                         </div>
 
                     </div>

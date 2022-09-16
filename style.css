@@ -251,10 +251,16 @@ body {
     height: 7px;
     border-radius: 0;
   }
+   
+  /* #mirror{
+    max-width: 40%
+  } */
   
   .custom-progress .progress-bar {
     background: #000;
   }
+
+    
   
   
   
