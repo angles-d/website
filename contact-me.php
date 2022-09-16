@@ -24,7 +24,8 @@ if (isset($_POST["Email"])) {
         problem("We're sorry, but there appears to be a problem with the form you submitted.");
     }
 
-    $name = $_POST["Name"]; // required
+    $first_name = $_POST["First Name"]; // required
+    $last_name = $_POST["Last Name"]; // required
     $email = $_POST["Email"]; // required
     $message = $_POST["Message"]; // required
 
@@ -37,7 +38,10 @@ if (isset($_POST["Email"])) {
 
     $string_exp = "/^[A-Za-z .'-]+$/";
 
-    if (!preg_match($string_exp, $name)) {
+    if (!preg_match($string_exp, $first_name)) {
+        $error_message .= "The Name you entered does not appear to be valid.<br>";
+    }
+    if (!preg_match($string_exp, $last_name)) {
         $error_message .= "The Name you entered does not appear to be valid.<br>";
     }
 
@@ -57,7 +61,8 @@ if (isset($_POST["Email"])) {
         return str_replace($bad, "", $string);
     }
 
-    $email_message .= "Name: " . clean_string($name) . "\n";
+    $email_message .= "First Name: " . clean_string($first_name) . "\n";
+    $email_message .= "Last Name: " . clean_string($last_name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 

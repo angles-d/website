@@ -35,44 +35,38 @@
 
         <div class="row">
             <div class="col-8 offset-5">
-                <form id="fcf-form-id"  method="post" action="contact-form-process.php">
+                <form id="form-id" method="post" action="contact-me.php">
                     <div class="row mb-1">
                         <div class="col-4 mr-1">
-                            <label for="First Name" >First Name</label>
-                            <div class="fcf-input-group">
-                                <input type="text" id="first-name" name="first-name" class="fcf-form-control" required>
-                            </div>
+                            <label for="First Name">First Name</label>
+                            <input type="text" id="first-name" name="First name" required>
+
                         </div>
                         <div class="col-4 mb-3">
                             <label for="Last Name">Last Name</label>
-                            <div class="fcf-input-group">
-                                <input type="text" id="last-ame" name="last-name" class="fcf-form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
+                            <input type="text" id="last-name" name="Last name" required>
 
-                        <div class="col-8 fcf-form-group">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
                             <label for="Email">Email address</label>
-                            <div class="fcf-input-group mb-3 pr-5">
-                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                            <div class="mb-3 pr-5">
+                                <input type="email" id="Email" name="Email" required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-9 fcf-form-group mb-4">
+                        <div class="col-9 mb-4">
                             <label for="Message">Message</label>
-                            <div class="fcf-input-group">
-                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
-                                    required></textarea>
-                            </div>
+                            <textarea id="Message" name="Message" rows="6" maxlength="3000"
+                                required></textarea>
+
                         </div>
                     </div>
-                    <div class="fcf-form-group">
-                        <button type="submit"
-                            class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block readmore">Send</button>
-                    </div>
-                 </form>
+                    <button type="submit"class="readmore"> Send</button>
+
+                </form>
             </div>
         </div>
     </div>
