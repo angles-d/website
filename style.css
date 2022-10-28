@@ -172,11 +172,7 @@ h6,
   font-weight: 700;
 }
 
-.team p{
-  margin-bottom: 7px;
-  /* font-size: 14px; */
-  /* font-family: "Raleway", sans-serif; */
-}
+
 
 .readmore:active,
 .readmore:focus,
@@ -337,4 +333,7 @@ h6,
   opacity: 1;
 }
 
+.team p{
+  margin-bottom:7px;
+}
 
