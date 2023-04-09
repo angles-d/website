@@ -1,3 +1,6 @@
+@import '../../../resources/styles/settings';
+@import '../../../resources/styles/fonts';
+
 body {
   font-family: "Inconsolata", monospace;
   color: #0d1e2d;
@@ -21,6 +24,10 @@ h5,
 h6,
 .font-heading {
   font-family: "Raleway", sans-serif;
+}
+.p{
+  margin: 0;
+  padding: 0;
 }
 
 .section {
@@ -284,6 +291,20 @@ h6,
   top: 10px
 }
 
+.carousel-nav-icon {
+  height: 48px;
+  width: 48px;
+}
+
+.carousel-item .col,
+.col-sm,
+.col-md {
+  margin: 8px;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+}
+
 .quarter {
   max-width: 100%;
 }
@@ -322,18 +343,24 @@ h6,
   transition: 0.3s all ease;
 }
 
-.art-text span{
+.art-text span {
   font-size: 14px;
   text-transform: uppercase;
 }
 
 
-.art-wrap:hover .art-background, .art-text {
+.art-wrap:hover .art-background,
+.art-text {
   visibility: visible;
   opacity: 1;
 }
 
-.team p{
-  margin-bottom:7px;
+.team p {
+  margin-bottom: 7px;
 }
 
+video {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
