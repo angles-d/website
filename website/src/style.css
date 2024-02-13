@@ -1,6 +1,3 @@
-@import '../../../resources/styles/settings';
-@import '../../../resources/styles/fonts';
-
 body {
   font-family: "Inconsolata", monospace;
   color: #0d1e2d;
