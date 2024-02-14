@@ -1,24 +1,32 @@
+import React from "react";
 import NavBar from "./NavBar"
 
 //team given in structure of 
 //[[Name, Job]]
 function createTeam(teamList){
-  const formattedTeam = []
+  let team =[]
   teamList.forEach( element => {
-    let [name, job] = element;
-    let p = <p>${name} (${job})</p>
-    formattedTeam.append(p)
+    team.push(React.createElement("p", {},element));
   });
+  let formattedTeam = React.createElement("div", { className: "team",  style:{fontSize: 15}}, team);
   return formattedTeam
 }
 
 function formatLinks(links){
-
+  let formattedLinks = []
+  links.forEach( element => {
+    let [text, link] = element
+    formattedLinks.push(React.createElement("a", {className:"readmore", href: link}, text));
+  });
+  
+  return React.createElement("div", { className: "links" },formattedLinks);
 }
 
 export default function Page(props){
-  const {teamList, projectTitle, date, projectType, toolsUsed, content} = props.props
-  // let team = createTeam({props.teamList})
+  const {teamList, projectTitle, date, projectType, toolsUsed, content, links} = props.props
+  let team = createTeam(teamList)
+  let formattedLinks = formatLinks(links)
+  console.log(formattedLinks)
   return (<>
     {/* header */}
     <div className="container">
@@ -33,18 +41,13 @@ export default function Page(props){
           <p className="mb-4"> {projectType} | {toolsUsed}</p>
           
           {/* links */}
-          <p>
-            <a
-              href="https://github.com/EmpathyBytes/VR-Archive"
-              className="readmore"> Github</a>
-          </p>
+          {formattedLinks}
+
           {/* team */}
           <div className="team">
             <div className="row mt-5 mb-4" />
             <h5 style={{ marginBottom: 4 }}>The Team </h5>
-            <div style={{ fontSize: 15 }}>
-              team
-            </div>
+            {team}
           </div>
         </div>
         

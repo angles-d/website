@@ -356,6 +356,10 @@ h6,
   margin-bottom: 7px;
 }
 
+.links * {
+  margin: 7px;
+}
+
 video {
   position: relative;
   left: 50%;
