@@ -9,7 +9,7 @@ const content = [
     <p class="mb-0">Lets Build creates a virtual AR sandbox playground where the children can build together with blocks. Nearby users will be able to influence each other's space and view and interact with each other's block additions. Each user is assigned a unique block color and must collaborate with the others to create and design the scene. 
     </p>,
     <br/>,
-    <p>,
+    <p>
     To implement the multiplayer functionality, we used Apple's Multiplayer connectivity Framework coupled with ARFoundation Samples library. We used both physics and AR rays to detect potential collisions between both AR and real-world objects allowing the player to interact with both the AR blocks and world around them. Plane tracking was used to create the initial game board and placeable area for the blocks.
     </p>,
     <div class="d-flex justify-content-center">
@@ -26,7 +26,6 @@ const links =[["Devpost","https://devpost.com/software/lets-build"],
 ["Github", "https://github.com/angles-d/HackGT9"],
 ["Figma","https://www.figma.com/file/ZaGfzMxBhxcRp7UBoxerV7/HackGT9?node-id=0%3A1"]
 ]
-
 
 const pageInfo = {
     teamList: team,

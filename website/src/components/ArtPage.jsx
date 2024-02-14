@@ -1,79 +1,54 @@
 import NavBar from "./NavBar"
 
+function ArtSquare(props){
+    return (
+     <>
+          <div className="art-wrap">
+              <div className="art-background">
+                  <div className="art-text">
+                      <h3>{props.title}</h3>
+                      <span>{props.medium}</span>
+                  </div>
+              </div>
+              <img className="img-fluid" src={props.src}/>
+          </div>
+          <br/>
+    </>
+    )
+  }
+
 export default function ArtPage(){
   return (
    <>
     <div className="container">
-      {/* .sticky-top for scrolling navbar */}
       <NavBar/>
       <div className="mt-5 mb-4 row" />
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h1 class="mb-2">Art</h1>
+    <div className="container">
+        <div className="row">
+            {/* Column A */}
+            <div className="col-4">
+                {/* Title */}
+                <h1 className="mb-2">Art</h1>
                 <h5>2018-Present</h5>
-                <p class="mb-5">Mixed Media</p>
-                <div class="art-wrap">
-                    <div class="art-background">
-                        <div class="art-text">
-                            <h3>3:00 AM</h3>
-                            <span>Papercutting, Digital</span>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="./src/assets/img/art/shapes.jpg"/>
-                </div>
-                <br/>
+                <p className="mb-5">Mixed Media</p>
 
-
+                {/* Art */}
+                <ArtSquare title ="3:00 AM" medium = "Papercutting, Digital" src="./src/assets/img/art/shapes.jpg" />
             </div>
-
-            <div class="col-8">
-                <div class="row">
-                    <div class="col-6 mb-5">
-                        <div class="art-wrap">
-                            <div class="art-background">
-                                <div class="art-text">
-                                    <h3>yellow</h3>
-                                    <span>Digital</span>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./src/assets/img/art/yellow.png"/>
-                        </div>
-                   
-                        <div class="art-wrap">
-                            <div class="art-background">
-                                <div class="art-text">
-                                    <h3>Blueming</h3>
-                                    <span>Digital</span>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./src/assets//img/art/blueming.gif"/>
-                        </div>
-                        <br/>
-
+             {/* Column B */}
+            <div className="col-8">
+                <div className="row">
+                    {/* Column 1 */}
+                    <div className="col-6 mb-5">
+                        <ArtSquare title ="yellow" medium = "Digital" src="./src/assets/img/art/yellow.png" />
+                        <ArtSquare title ="Blueming" medium = "Digital" src="./src/assets/img/art/blueming.gif" />
                     </div>
-                    <div class="col-6 mb-5">
 
-                        <div class="art-wrap">
-                            <div class="art-background">
-                                <div class="art-text">
-                                    <h3>Sky Summer</h3>
-                                    <span>Papercutting, Digital</span>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./src/assets/img/art/umbrella-2.gif"/>
-                        </div>
-                        <br/>
-                        <div class="art-wrap">
-                            <div class="art-background">
-                                <div class="art-text">
-                                    <h3>Last piece</h3>
-                                    <span>Papercutting</span>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="./src/assets/img/art/face.jpg"/>
-                        </div>
+                    {/* Column 2 */}
+                    <div className="col-6 mb-5">
+                        <ArtSquare title ="Summer Sky" medium = "Papercutting, Digital" src="./src/assets/img/art/umbrella-2.gif" />
+                        <ArtSquare title ="Last Piece" medium = "Papercutting" src="./src/assets/img/art/face.jpg" />
                         <br/>
                     </div>
                 </div>

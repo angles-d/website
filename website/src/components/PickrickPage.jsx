@@ -1,14 +1,18 @@
 import ProjectPage from "./ProjectPage.jsx"
-function restartSlideShow(){
-  $("#carousel-pillar").on('slid.bs.carousel', function () {
-    var vids = $(this).find(".active video");
-    if (vids.length > 0) {
-        vids[0].pause();
-        vids[0].currentTime = 0;
-        vids[0].play();
-    }
-})
-}
+import Carousel from "./Carousel.jsx"
+
+import wallVid from  "../assets/img/pickrick/wall.mp4";
+import video from  "../assets/img/pickrick/pillar_activists.mp4";
+import pillarScanning from "../assets/img/pickrick/pillar_scanning.mp4";
+
+
+let videos = [
+    wallVid,
+    video,
+    pillarScanning
+]
+
+
 
 let content = (<>
   <p>
@@ -54,7 +58,6 @@ let content = (<>
     storytelling media. We had 2 main goals: reduce the reliance on traditional
     2D UI, and take advantage of the physical space.
   </p>
-  {/* <p style = "margin-bottom: 0px;"><b> My responsibilities:</b></p> */}
   <p style={{ marginBottom: 2 }}>My responsibilities:</p>
   <ul>
     <li>Collaborating with the design team and historians</li>
@@ -67,8 +70,9 @@ let content = (<>
     </li>
   </ul>
   <div className="mt-2 mb-2 row" />
+
   {/* User Testing */}
-  <h4>Converting content to AR </h4>
+  <h4>Tailoring content for AR </h4>
   <p>
     For the experience we wanted to avoid using 2D screen formats as that would
     defeat the purpose of AR aspect. However, we still had to convey a lot of
@@ -81,69 +85,9 @@ let content = (<>
     track the physical planes.
   </p>
   {/* AR UI slideshow */}
-  <div className="row d-flex align-items-center mb-3">
-    <div className="col-1 d-flex align-items-center justify-content-center">
-      <a href="#carousel-pillar" role="button" data-slide="prev">
-        <div className="carousel-nav-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 129 129"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
-            <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z" />
-          </svg>
-        </div>
-      </a>
-    </div>
-    <div className="col-10">
-      {/*Start carousel*/}
-      <div
-        id="carousel-pillar"
-        className="carousel slide"
-        data-ride="carousel"
-        data-interval="false"
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <video height={400} controls="">
-              <source type="video/mp4" src="../src/assets/img/pickrick/wall.mp4" />
-            </video>
-          </div>
-          <div className="carousel-item">
-            <video height={400} controls="">
-              <source
-                type="video/mp4"
-                src="../src/assets/img/pickrick/pillar_activists.mp4"
-              />
-            </video>
-          </div>
-          <div className="carousel-item">
-            <video height={400} controls="">
-              {/* <source type="video/webm" src="filename.webm" /> */}
-              <source
-                type="video/mp4"
-                src="../src/assets/img/pickrick/pillar_scanning.mp4"
-              />
-            </video>
-          </div>
-        </div>
-      </div>
-      {/*End carousel*/}
-    </div>
-    <div className="col-1 d-flex align-items-center justify-content-center">
-      <a href="#carousel-pillar" data-slide="next">
-        <div className="carousel-nav-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 129 129"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
-            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" />
-          </svg>
-        </div>
-      </a>
-    </div>
-  </div>
+  <Carousel videos = {videos}/>
+   
+
   {/* ending ar ui slideshow */}
   <div className="mt-2 mb-2 row" />
   {/* User Testing */}
@@ -161,11 +105,11 @@ let content = (<>
   </p>
   <div className="row">
     <video
-      className="mb-3 d-flex align-items-center justify-content-center"
+      className="col-4 col-md d-flex align-items-center justify-content-center"
       height={400}
-      controls=""
+      controls
+      muted
     >
-      {/* <source type="video/webm" src="filename.webm" /> */}
       <source type="video/mp4" src="../src/assets/img/pickrick/crowds_animation.mp4" />
     </video>
   </div>

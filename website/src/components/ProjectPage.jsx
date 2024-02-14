@@ -26,7 +26,6 @@ export default function Page(props){
   const {teamList, projectTitle, date, projectType, toolsUsed, content, links} = props.props
   let team = createTeam(teamList)
   let formattedLinks = formatLinks(links)
-  console.log(formattedLinks)
   return (<>
     {/* header */}
     <div className="container">
