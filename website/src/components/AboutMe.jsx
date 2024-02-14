@@ -4,6 +4,7 @@ import NavBar from './NavBar.jsx'
 export default function AboutMe() {
   return (
     <>
+    <div className="container">
     <NavBar/>
     <div className="mt-5 mb-5 row"></div>
         <div className="row mb-5">
@@ -28,7 +29,7 @@ export default function AboutMe() {
             <div className="col-5 offset-1">
                 <img className="img-fluid" src="./src/assets/img/profile-blob.png"/>
             </div>
-
+        </div>
         </div>
         </>
   )

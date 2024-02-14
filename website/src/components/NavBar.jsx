@@ -7,8 +7,8 @@ export default function NavBar(){
                 <Link to="/">Home</Link>
                 <a href="/#projects" className="pl-3">Projects</a>
                 <a href="/about-me" className=" pl-3">About</a>
-                <Link to="/contact">Contact</Link>
-                <a href="./Dai_Resume.pdf" className="pl-3">Resume</a>
+                <a href="/contact" className=" pl-3" >Contact</a>
+                <a href="./Dai_Resume.pdf" className="pl-3" target="_blank">Resume</a>
             </div>
         </div>
         <Outlet />
