@@ -1,44 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+import NavBar from "./NavBar"
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+export default function HivePage(){
+  return (<>
+    <meta charSet="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Modeling the Hive</title>
-    <meta content="" name="description">
-
-    <link href="assets/img/favicon.png" rel="icon">
-   
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="./../style.css" rel="stylesheet">
-
-</head>
-
-<body>
-    <!-- header -->
-    <div class="container">
-        <!-- .sticky-top for scrolling navbar -->
-  
-        <div class="mt-5 row align-items-center">
-            <div class="col-6 offset-6 text-start text-lg-end  justify-content-end nav-bar  d-flex">
-                <a href="./../index.html" class="">Home</a>
-                <a href="./../index.html#projects" class="pl-3">Projects</a>
-                <a href="./../about-me.html" class=" pl-3">About</a>
-                <a href="./../contact-me.html" class="pl-3">Contact</a>
-                <a href="./../Dai_Resume.pdf" class="pl-3">Resume</a>
-            </div>
-        </div>
-        <div class="mt-5 mb-4 row"></div>
-
+    {/* header */}
+    <div className="container">
+      {/* .sticky-top for scrolling navbar */}
+      <NavBar/>
+      <div className="mt-5 mb-4 row" />
     </div>
-
     <div class="container">
         <div class="row mb-4">
             <div class="col-4">
-                <h1 class="mb-2">Modeling <br>the Hive</h1>
+                <h1 class="mb-2">Modeling <br/>the Hive</h1>
                 <h5>2021</h5>
                 <p class="mb-4">AR/VR | C#, Unity, Blender</p>
                 <p><a href="https://github.com/EmpathyBytes/Hive" class="readmore">Github</a></p>
@@ -48,8 +24,8 @@
                 </p>
                 <div class = "team"> 
                     <div class="row mt-5 mb-4"></div>
-                    <h5 style = "margin-bottom:4px;">The Team </h5>
-                    <div style = "font-size:15px;">
+                    <h5 style = {{"margin-bottom":"4px"}}>The Team </h5>
+                    <div style = {{"font-size":"15px"}}>
                         <p>Angela Dai (Team Lead: Modeling)</p>
                         <p>Joseph Liu (Team Lead: Unity)</p>
                         <p>Seth Morill (Team Lead: Unity)</p>
@@ -67,7 +43,7 @@
                 <div class="mb-5">
                     <div class="sticky-content">
                         <p>The Hive is an interactive AR/VR experience of Georgia Tech's ECE makerspace, the Hive. </p>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="./../img/hive/hive_actual.jpg">
+                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_actual.jpg"/>
                         <p>As part of the EmpathyBytes VIP's exploration of GT makerspaces, the emerging
                             technologies team decided to expand on their research by creating a virtual version of the
                             ECE makerspace, The Hive. The goal of this project was to introduce the space and machinery
@@ -76,18 +52,18 @@
 
                         <p>The app was created in Unity using ARFoundation. Within the space, the user can
                             navigate through The Hive and interact with any machinery they encounter.</p>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="./../img/hive/hive_unity.png">
+                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_unity.png"/>
 
                         <p>The models for the project were created in Blender and modeled using reference photos from the makerspace.</p>
                         <div class = "row">
                             <div class = "col pr-1">
-                                <img class="img-fluid pl-4  mt-2 mb-3" src="./../img/hive/ref.jpg">
+                                <img class="img-fluid pl-4  mt-2 mb-3" src="../src/assets/img/hive/ref.jpg"/>
                             </div>
                             <div class = "col pl-1">
-                                <img class="img-fluid pr-4 mt-2 mb-3" src="./../img/hive/model.png">
+                                <img class="img-fluid pr-4 mt-2 mb-3" src="../src/assets/img/hive/model.png"/>
                             </div>
                         </div>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="./../img/hive/hive_blender.png">
+                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_blender.png"/>
 
                     </div>
                 </div>
@@ -96,8 +72,6 @@
         </div>
 
     </div>
-
-
-</body>
-
-</html>
+  </>
+  )
+}
