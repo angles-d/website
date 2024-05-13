@@ -4,6 +4,7 @@ import NavBar from "./NavBar"
 //team given in structure of 
 //[[Name, Job]]
 function createTeam(teamList){
+  if( teamList == null){return;}
   let team =[]
   teamList.forEach( element => {
     team.push(React.createElement("p", {},element));
@@ -43,11 +44,11 @@ export default function Page(props){
           {formattedLinks}
 
           {/* team */}
-          <div className="team">
+         {teamList != null &&  <div className="team">
             <div className="row mt-5 mb-4" />
             <h5 style={{ marginBottom: 4 }}>The Team </h5>
             {team}
-          </div>
+          </div>}
         </div>
         
         {/* body content */}

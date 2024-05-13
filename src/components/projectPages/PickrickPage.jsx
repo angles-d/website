@@ -1,9 +1,9 @@
-import ProjectPage from "./ProjectPage.jsx"
-import Carousel from "./Carousel.jsx"
+import ProjectPage from "../ProjectPage.jsx"
+import Carousel from "../Carousel.jsx"
 
-import wallVid from  "../assets/img/pickrick/wall.mp4";
-import video from  "../assets/img/pickrick/pillar_activists.mp4";
-import pillarScanning from "../assets/img/pickrick/pillar_scanning.mp4";
+import wallVid from  "../../assets/img/pickrick/wall.mp4";
+import video from  "../../assets/img/pickrick/pillar_activists.mp4";
+import pillarScanning from "../../assets/img/pickrick/pillar_scanning.mp4";
 
 
 let videos = [

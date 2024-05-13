@@ -1,4 +1,4 @@
-import ProjectPage from "./ProjectPage.jsx"
+import ProjectPage from "../ProjectPage.jsx"
 
 const pageContent = [
   <p>

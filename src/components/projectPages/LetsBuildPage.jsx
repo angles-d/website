@@ -1,4 +1,4 @@
-import ProjectPage from "./ProjectPage.jsx"
+import ProjectPage from "../ProjectPage.jsx"
 
 const content = [
     <p> Lets Build! is a block-based multiplayer AR application that allows users to collaboratively build structures, memories, and endless amounts of chaos built for HackGT9.

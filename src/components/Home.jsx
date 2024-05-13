@@ -67,7 +67,11 @@ export default function Home() {
 
       <Project projectTitle  = "McCloud Pyramid" projectUrl = "./project/mccloud"  imageUrl = "./src/assets/img/mccloud/hubs.png" projectType = "AR"/>
 
+      <Project projectTitle  = "Animation Class Projects" projectUrl = "./project/animation-projects"  imageUrl = "./src/assets/img/art/art.jpg" projectType = "Animation"/>
+
       <Project projectTitle  = "Art" projectUrl = "./art"  imageUrl = "./src/assets/img/art/art.jpg" projectType = "Mixed Media"/>
+      
+      
     </div>
     <div className="mt-5" />
   </div>

@@ -1,4 +1,4 @@
-import ProjectPage from "./ProjectPage.jsx"
+import ProjectPage from "../ProjectPage.jsx"
 
 const content = [
     <p>The McCloud Pyramid project is an interactive VR representation of Scott McCloud's "Big Triangle" of visual
