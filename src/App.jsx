@@ -10,30 +10,32 @@ import McCloudPage from "./components/projectPages/McCloudPage.jsx"
 import PickrickPage from "./components/projectPages/PickrickPage.jsx"
 import LetsBuildPage from "./components/projectPages/LetsBuildPage.jsx"
 import AnimationProjectsPage from "./components/projectPages/AnimationProjectsPage.jsx"
+import CompGraphicsProjectsPage from "./components/projectPages/ComputerGraphicsProjects.jsx"
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {HashRouter, Routes, Route } from "react-router-dom";
 function App() {
-  return (
-    <>
-     <BrowserRouter basename={"/website/"}>
+  return (<>
+     <HashRouter basename={""}>
       <Routes>
         {/* NavBar */}
-        <Route path="/" element={<Home />}/>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about-me" element={<AboutMe />} />
+        <Route exact path="/" element={<Home />}/>
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/about-me" element={<AboutMe />} />
         
         {/* project pages */}
-        <Route path="project/archives" element={<ArchivesPage />} />
-        <Route path="project/pickrick-protests" element={<PickrickPage />} />
-        <Route path="/art" element={<ArtPage />} />
-        <Route path="project/mccloud" element={<McCloudPage />} />
-        <Route path="project/hive" element={<HivePage />} />
-        <Route path="project/lets-build" element={<LetsBuildPage />} />
-        <Route path="project/animation-projects" element={<AnimationProjectsPage />} />
+        <Route exact path="project/archives" element={<ArchivesPage />} />
+        <Route exact path="project/pickrick-protests" element={<PickrickPage />} />
+        <Route exact path="/art" element={<ArtPage />} />
+        <Route exact path="project/mccloud" element={<McCloudPage />} />
+        <Route exact path="project/hive" element={<HivePage />} />
+        <Route exact path="project/lets-build" element={<LetsBuildPage />} />
+        <Route exact path="project/animation-projects" element={<AnimationProjectsPage />} />
+        <Route exact path="project/computer-graphics-projects" element={<CompGraphicsProjectsPage />} />
         
       </Routes>
-    </BrowserRouter>
-  </>
+    </HashRouter>
+    </>
+    
   )
 }
 

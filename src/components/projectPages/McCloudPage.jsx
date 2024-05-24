@@ -1,4 +1,7 @@
 import ProjectPage from "../ProjectPage.jsx"
+import meaningImg from "../../assets/img/mccloud/meaning-map.png"
+import morphingImg from "../../assets/img/mccloud/morphing.gif"
+import mirrorImg from "../../assets/img/mccloud/mirror.gif"
 
 const content = [
     <p>The McCloud Pyramid project is an interactive VR representation of Scott McCloud's "Big Triangle" of visual
@@ -13,7 +16,7 @@ const content = [
     </p>,
 
     <div className="d-flex justify-content-center">
-      <img className="col-9  mb-4 img-fluid" src="../src/assets/img/mccloud/meaning-map.png"/>
+      <img className="col-9  mb-4 img-fluid" src={meaningImg}/>
     </div>,
 
     <p>
@@ -23,7 +26,7 @@ const content = [
     then using morph-targets in Three.js to perform the realtime morphing.
   </p>,
   <div className="d-flex justify-content-center">
-    <img className="mt-2 mb-4" src="../src/assets/img/mccloud/morphing.gif"/>
+    <img className="mt-2 mb-4" src={morphingImg}/>
   </div>,
   <p>,
     As the project progressed, additional intermediate steps were added into the path to
@@ -32,7 +35,7 @@ const content = [
   </p>,
 
   <div className="d-flex justify-content-center">
-    <img className="mb-4" id="mirror" src="../src/assets/img/mccloud/mirror.gif"/>
+    <img className="mb-4" id="mirror" src={mirrorImg}/>
   </div>,
 ]
 

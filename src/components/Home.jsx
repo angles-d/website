@@ -1,6 +1,16 @@
 import { useState } from 'react'
 import NavBar from './NavBar.jsx'
 
+// Importing images
+import pickrickImage from '../assets/img/pickrick/Pickrick.jpeg';
+import letsbuildImage from '../assets/img/letsbuild/letsbuild.png';
+import archivesImage from '../assets/img/archives/old_campus.jpg';
+import hiveImage from '../assets/img/hive/hive.png';
+import mccloudImage from '../assets/img/mccloud/hubs.png';
+import animationImage from '../assets/img/animation/mocap_walking.gif';
+import compGraphicsImage from '../assets/img/comp-graphics/sphere.png';
+import artImage from '../assets/img/art/art.jpg';
+
 function Project(props){
   return (
       <div className="square col-6 mb-4">
@@ -57,19 +67,21 @@ export default function Home() {
       </div>
     </div>
     <div className="row no-gutter">
-      <Project projectTitle  = "The Pickrick Protests" projectUrl = "./project/pickrick-protests" imageUrl = "./src/assets/img/pickrick/Pickrick.jpeg" projectType = "AR"/>
+      <Project projectTitle  = "The Pickrick Protests" projectUrl = "./#/project/pickrick-protests" imageUrl ={ pickrickImage} projectType = "AR"/>
 
-      <Project projectTitle  = "Let's Build!" projectUrl = "./project/lets-build" imageUrl = "./src/assets/img/letsbuild/letsbuild.png" projectType = "AR"/>
+      <Project projectTitle  = "Let's Build!" projectUrl = "./#/project/lets-build" imageUrl = {letsbuildImage} projectType = "AR"/>
 
-      <Project projectTitle  = "The Georgia Tech Archives" projectUrl = "project/archives" imageUrl = "./src/assets/img/archives/old_campus.jpg" projectType = "VR"/>
+      <Project projectTitle  = "The Georgia Tech Archives" projectUrl = "./#/project/archives" imageUrl = {archivesImage} projectType = "VR"/>
 
-      <Project projectTitle  = "Modeling The Hive" projectUrl = "./project/hive" imageUrl = "./src/assets/img/hive/hive.png" projectType = "VR"/>
+      <Project projectTitle  = "Modeling The Hive" projectUrl = "./#/project/hive" imageUrl = {hiveImage} projectType = "VR"/>
 
-      <Project projectTitle  = "McCloud Pyramid" projectUrl = "./project/mccloud"  imageUrl = "./src/assets/img/mccloud/hubs.png" projectType = "AR"/>
+      <Project projectTitle  = "McCloud Pyramid" projectUrl = "./#/project/mccloud"  imageUrl = {mccloudImage} projectType = "AR"/>
 
-      <Project projectTitle  = "Animation Class Projects" projectUrl = "./project/animation-projects"  imageUrl = "./src/assets/img/art/art.jpg" projectType = "Animation"/>
+      <Project projectTitle  = "Animation Class Projects" projectUrl = "./#/project/animation-projects"  imageUrl = {animationImage} projectType = "Animation"/>
+     
+     <Project projectTitle  = "Computer Graphics Class Projects" projectUrl = "./#/project/computer-graphics-projects"  imageUrl = {compGraphicsImage} projectType = "Animation"/>
 
-      <Project projectTitle  = "Art" projectUrl = "./art"  imageUrl = "./src/assets/img/art/art.jpg" projectType = "Mixed Media"/>
+      <Project projectTitle  = "Art" projectUrl = "./#/art"  imageUrl = {artImage} projectType = "Mixed Media"/>
       
       
     </div>

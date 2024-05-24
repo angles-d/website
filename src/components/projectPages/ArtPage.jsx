@@ -1,4 +1,9 @@
 import NavBar from "../NavBar"
+import shapeImage from "../../assets/img/art/shapes.jpg";
+import yellowImage from "../../assets/img/art/yellow.png";
+import bluemingImage from "../../assets/img/art/blueming.gif";
+import umbrellaImage from "../../assets/img/art/umbrella-2.gif";
+import faceImage from "../../assets/img/art/face.jpg";
 
 function ArtSquare(props){
     return (
@@ -34,21 +39,21 @@ export default function ArtPage(){
                 <p className="mb-5">Mixed Media</p>
 
                 {/* Art */}
-                <ArtSquare title ="3:00 AM" medium = "Papercutting, Digital" src="./src/assets/img/art/shapes.jpg" />
+                <ArtSquare title ="3:00 AM" medium = "Papercutting, Digital" src={shapeImage} />
             </div>
              {/* Column B */}
             <div className="col-8">
                 <div className="row">
                     {/* Column 1 */}
                     <div className="col-6 mb-5">
-                        <ArtSquare title ="yellow" medium = "Digital" src="./src/assets/img/art/yellow.png" />
-                        <ArtSquare title ="Blueming" medium = "Digital" src="./src/assets/img/art/blueming.gif" />
+                        <ArtSquare title ="yellow" medium = "Digital" src={yellowImage} />
+                        <ArtSquare title ="Blueming" medium = "Digital" src={bluemingImage} />
                     </div>
 
                     {/* Column 2 */}
                     <div className="col-6 mb-5">
-                        <ArtSquare title ="Summer Sky" medium = "Papercutting, Digital" src="./src/assets/img/art/umbrella-2.gif" />
-                        <ArtSquare title ="Last Piece" medium = "Papercutting" src="./src/assets/img/art/face.jpg" />
+                        <ArtSquare title ="Summer Sky" medium = "Papercutting, Digital" src={umbrellaImage}/>
+                        <ArtSquare title ="Last Piece" medium = "Papercutting" src={faceImage} />
                         <br/>
                     </div>
                 </div>

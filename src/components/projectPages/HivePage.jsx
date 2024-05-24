@@ -1,4 +1,10 @@
 import NavBar from "../NavBar"
+import hiveImg from "../../assets/img/hive/hive_actual.jpg"
+import refImg from "../../assets/img/hive/ref.jpg"
+import modelImg from "../../assets/img/hive/model.png"
+import blenderImg from "../../assets/img/hive/hive_blender.png"
+import unityImg from "../../assets/img/hive/hive_unity.png"
+
 
 export default function HivePage(){
   return (<>
@@ -11,19 +17,19 @@ export default function HivePage(){
       <NavBar/>
       <div className="mt-5 mb-4 row" />
     </div>
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-4">
-                <h1 class="mb-2">Modeling <br/>the Hive</h1>
+    <div className="container">
+        <div className="row mb-4">
+            <div className="col-4">
+                <h1 className="mb-2">Modeling <br/>the Hive</h1>
                 <h5>2021</h5>
-                <p class="mb-4">AR/VR | C#, Unity, Blender</p>
-                <p><a href="https://github.com/EmpathyBytes/Hive" class="readmore">Github</a></p>
+                <p className="mb-4">AR/VR | C#, Unity, Blender</p>
+                <p><a href="https://github.com/EmpathyBytes/Hive" className="readmore">Github</a></p>
                 <p><a href="https://educast.library.gatech.edu/makerspaces/makerspace-collection/"
-                        class="readmore">Makerspace Interview Collection
+                        className="readmore">Makerspace Interview Collection
                     </a>
                 </p>
-                <div class = "team"> 
-                    <div class="row mt-5 mb-4"></div>
+                <div className = "team"> 
+                    <div className="row mt-5 mb-4"></div>
                     <h5 style = {{"margin-bottom":"4px"}}>The Team </h5>
                     <div style = {{"font-size":"15px"}}>
                         <p>Angela Dai (Team Lead: Modeling)</p>
@@ -39,11 +45,11 @@ export default function HivePage(){
             </div>
 
 
-            <div class="col">
-                <div class="mb-5">
-                    <div class="sticky-content">
+            <div className="col">
+                <div className="mb-5">
+                    <div className="sticky-content">
                         <p>The Hive is an interactive AR/VR experience of Georgia Tech's ECE makerspace, the Hive. </p>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_actual.jpg"/>
+                        <img className="img-fluid mt-2 mb-4 pl-4 pr-4" src={hiveImg}/>
                         <p>As part of the EmpathyBytes VIP's exploration of GT makerspaces, the emerging
                             technologies team decided to expand on their research by creating a virtual version of the
                             ECE makerspace, The Hive. The goal of this project was to introduce the space and machinery
@@ -52,18 +58,18 @@ export default function HivePage(){
 
                         <p>The app was created in Unity using ARFoundation. Within the space, the user can
                             navigate through The Hive and interact with any machinery they encounter.</p>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_unity.png"/>
+                        <img className="img-fluid mt-2 mb-4 pl-4 pr-4" src={unityImg}/>
 
                         <p>The models for the project were created in Blender and modeled using reference photos from the makerspace.</p>
-                        <div class = "row">
-                            <div class = "col pr-1">
-                                <img class="img-fluid pl-4  mt-2 mb-3" src="../src/assets/img/hive/ref.jpg"/>
+                        <div className = "row">
+                            <div className = "col pr-1">
+                                <img className="img-fluid pl-4  mt-2 mb-3" src={refImg}/>
                             </div>
-                            <div class = "col pl-1">
-                                <img class="img-fluid pr-4 mt-2 mb-3" src="../src/assets/img/hive/model.png"/>
+                            <div className = "col pl-1">
+                                <img className="img-fluid pr-4 mt-2 mb-3" src={modelImg}/>
                             </div>
                         </div>
-                        <img class="img-fluid mt-2 mb-4 pl-4 pr-4" src="../src/assets/img/hive/hive_blender.png"/>
+                        <img className="img-fluid mt-2 mb-4 pl-4 pr-4" src={blenderImg}/>
 
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import ProjectPage from "../ProjectPage.jsx"
+import archiveImg from "../../assets/img/archives/in_archives.jpg"
 
 const pageContent = [
   <p>
@@ -8,7 +9,7 @@ const pageContent = [
   </p>,
   <img
     className="img-fluid mt-2 mb-4 pl-4 pr-4"
-    src="../src/assets/img/archives/in_archives.jpg"
+    src={archiveImg}
   />,
   <p>
     This semester the EmpathyBytes team decided to focus on making

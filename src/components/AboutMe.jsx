@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from './NavBar.jsx'
+import profile from "../assets/img/profile-blob.png"
 
 export default function AboutMe() {
   return (
@@ -27,11 +28,11 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="col-5 offset-1">
-                <img className="img-fluid" src="./src/assets/img/profile-blob.png"/>
+                <img className="img-fluid" src={profile}/>
             </div>
         </div>
-        </div>
-        </>
+    </div>
+    </>
   )
 }
 

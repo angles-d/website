@@ -5,6 +5,16 @@ import wallVid from  "../../assets/img/pickrick/wall.mp4";
 import video from  "../../assets/img/pickrick/pillar_activists.mp4";
 import pillarScanning from "../../assets/img/pickrick/pillar_scanning.mp4";
 
+import demoGif from "../../assets/img/pickrick/pickrick_demo.gif";
+import cafeImg from "../../assets/img/pickrick/pickrick_cafe.jpeg";
+import ecoImg from "../../assets/img/pickrick/ecocommons.png";
+import crowdVid from "../../assets/img/pickrick/crowds_animation.mp4";
+import usertest1 from "../../assets/img/pickrick/usertest1.jpg";
+import usertest2 from "../../assets/img/pickrick/usertest2.jpeg";
+import usertest3 from "../../assets/img/pickrick/usertest3.png";
+import demoImg from "../../assets/img/pickrick/demo.png";
+
+
 
 let videos = [
     wallVid,
@@ -22,7 +32,7 @@ let content = (<>
   </p>
   <img
     className="img-fluid pl-5 pr-5 mb-3"
-    src="../src/assets/img/pickrick/pickrick_demo.gif"
+    src={demoGif}
   />
   <p>
     After the passing of the Civil Rights Act, three African American activists,
@@ -35,13 +45,13 @@ let content = (<>
   </p>
   <img
     className="img-fluid pl-5 pr-5"
-    src="../src/assets/img/pickrick/pickrick_cafe.jpeg"
+    src={cafeImg}
   />
   <p /> In 1966 after it closed, Georgia Tech purchased the restaurant. The
   building was later demolished in 2008, Tech demolished to build a green space.
   At the site now stands a memorial plaza to the protests.
   <p />
-  <img className="img-fluid pl-5 pr-5" src="../src/assets/img/pickrick/ecocommons.png" />
+  <img className="img-fluid pl-5 pr-5" src={ecoImg}/>
   <div className="mt-4 mb-4 row" />
   {/* Development */}
   <h3>Design & Development </h3>
@@ -110,7 +120,7 @@ let content = (<>
       controls
       muted
     >
-      <source type="video/mp4" src="../src/assets/img/pickrick/crowds_animation.mp4" />
+      <source type="video/mp4" src={crowdVid} />
     </video>
   </div>
   <p>
@@ -133,15 +143,15 @@ let content = (<>
   <div className="row">
     <img
       className="col-4 col-md d-flex align-items-center justify-content-center"
-      src="../src/assets/img/pickrick/usertest1.jpg"
+      src={usertest1}
     />
     <img
       className="col-4 col-md d-flex align-items-center justify-content-center"
-      src="../src/assets/img/pickrick/usertest3.png"
+      src={usertest3}
     />
     <img
       className="col-4 col-md d-flex align-items-center justify-content-center"
-      src="../src/assets/img/pickrick/usertest2.jpeg"
+      src={usertest2}
     />
   </div>
   <p>
@@ -169,7 +179,7 @@ let content = (<>
     for all stories, it can greatly elevate the user's emotional experience and
     understanding of the right ones.
   </p>
-  <img className="img-fluid mb-3 pl-4 pr-4" src="../src/assets/img/pickrick/demo.png" />
+  <img className="img-fluid mb-3 pl-4 pr-4" src={demoImg} />
   <div style={{ paddingBottom: 150 }} />
 </>)
 
