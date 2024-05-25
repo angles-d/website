@@ -67,22 +67,21 @@ export default function Home() {
       </div>
     </div>
     <div className="row no-gutter">
-      <Project projectTitle  = "The Pickrick Protests" projectUrl = "./#/project/pickrick-protests" imageUrl ={ pickrickImage} projectType = "AR"/>
+    <Project projectTitle  = "Computer Graphics Class Projects" projectUrl = "./#/project/computer-graphics-projects"  imageUrl = {compGraphicsImage} projectType = "Graphics"/>
 
-      <Project projectTitle  = "Let's Build!" projectUrl = "./#/project/lets-build" imageUrl = {letsbuildImage} projectType = "AR"/>
-
-      <Project projectTitle  = "The Georgia Tech Archives" projectUrl = "./#/project/archives" imageUrl = {archivesImage} projectType = "VR"/>
-
-      <Project projectTitle  = "Modeling The Hive" projectUrl = "./#/project/hive" imageUrl = {hiveImage} projectType = "VR"/>
-
-      <Project projectTitle  = "McCloud Pyramid" projectUrl = "./#/project/mccloud"  imageUrl = {mccloudImage} projectType = "AR"/>
-
-      <Project projectTitle  = "Animation Class Projects" projectUrl = "./#/project/animation-projects"  imageUrl = {animationImage} projectType = "Animation"/>
+    <Project projectTitle  = "Animation Class Projects" projectUrl = "./#/project/animation-projects"  imageUrl = {animationImage} projectType = "Animation"/>
      
-     <Project projectTitle  = "Computer Graphics Class Projects" projectUrl = "./#/project/computer-graphics-projects"  imageUrl = {compGraphicsImage} projectType = "Animation"/>
+    <Project projectTitle  = "The Pickrick Protests" projectUrl = "./#/project/pickrick-protests" imageUrl ={ pickrickImage} projectType = "AR"/>
 
-      <Project projectTitle  = "Art" projectUrl = "./#/art"  imageUrl = {artImage} projectType = "Mixed Media"/>
-      
+    <Project projectTitle  = "Let's Build!" projectUrl = "./#/project/lets-build" imageUrl = {letsbuildImage} projectType = "AR"/>
+
+    <Project projectTitle  = "The Georgia Tech Archives" projectUrl = "./#/project/archives" imageUrl = {archivesImage} projectType = "VR"/>
+
+    <Project projectTitle  = "Modeling The Hive" projectUrl = "./#/project/hive" imageUrl = {hiveImage} projectType = "VR"/>
+
+    <Project projectTitle  = "McCloud Pyramid" projectUrl = "./#/project/mccloud"  imageUrl = {mccloudImage} projectType = "AR"/>
+
+    <Project projectTitle  = "Art" projectUrl = "./#/art"  imageUrl = {artImage} projectType = "Mixed Media"/>
       
     </div>
     <div className="mt-5" />
