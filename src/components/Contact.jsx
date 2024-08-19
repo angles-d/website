@@ -28,7 +28,7 @@ export default function Contact() {
           <br/>
           <div className="row  d-flex align-items-center">
               <img className="col-2"  src={linkedInImg} style= {{"maxWidth":"20%", "height":"auto"}}/>
-              <a className="contact" href="https://www.linkedin.com/in/adai24/">https://www.linkedin.com/in/adai24/</a> 
+              <a className="contact" href="https://www.linkedin.com/in/adai24/" target='_blanks'>https://www.linkedin.com/in/adai24/</a> 
           </div>
         </div>
        

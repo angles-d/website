@@ -23,7 +23,7 @@ export default function AboutMe() {
                 </p>
                 <div style={{"opacity": "0.75"}}>
                     <p className="mb-1">Find me on:</p>
-                    <a href="https://www.linkedin.com/in/adai24/" className="readmore">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/adai24/" target= "_blanks" class= "readmore">Linkedin</a>
                     <a href="https://github.com/angles-d" className="readmore">Github</a>
                 </div>
             </div>

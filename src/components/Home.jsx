@@ -8,7 +8,7 @@ import archivesImage from '../assets/img/archives/old_campus.jpg';
 import hiveImage from '../assets/img/hive/hive.png';
 import mccloudImage from '../assets/img/mccloud/hubs.png';
 import animationImage from '../assets/img/animation/mocap_walking.gif';
-import compGraphicsImage from '../assets/img/comp-graphics/sphere.png';
+import compGraphicsImage from '../assets/img/compGraphics/sphere.png';
 import artImage from '../assets/img/art/art.jpg';
 
 function Project(props){
@@ -57,7 +57,7 @@ export default function Home() {
         <h3
           style={{
             fontFamily: '"Inconsolata", monospace',
-            opacity: "0.6",
+            opacity: "0.9",
             fontSize: 20,
             fontWeight: 600
           }}
@@ -67,7 +67,7 @@ export default function Home() {
       </div>
     </div>
     <div className="row no-gutter">
-    <Project projectTitle  = "Computer Graphics Class Projects" projectUrl = "./#/project/computer-graphics-projects"  imageUrl = {compGraphicsImage} projectType = "Graphics"/>
+    <Project projectTitle  = "Graphics Class Projects" projectUrl = "./#/project/computer-graphics-projects"  imageUrl = {compGraphicsImage} projectType = "Computer Graphics"/>
 
     <Project projectTitle  = "Animation Class Projects" projectUrl = "./#/project/animation-projects"  imageUrl = {animationImage} projectType = "Animation"/>
      
