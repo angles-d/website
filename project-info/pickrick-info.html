@@ -98,11 +98,14 @@
                     <div>
                         <p>The Pickrick project is an interactive location-based AR installation that recreates
                             the 1965 Atlanta Pickrick Protests produced by <a href="https://dilac.iac.gatech.edu/">GT
-                                DILAC</a>.</p>
-
-                        <img class="img-fluid pl-5 pr-5 mb-3" src=".././img/pickrick/pickrick_demo.gif">
-
-
+                                DILAC</a>.
+                        </p>
+                        <div class="d-flex flex-column justify-content-center align-items-center mb-3">
+                            <iframe class="embed-responsive-item"
+                                src="https://player.vimeo.com/video/932732102?h=d8a9da49f2&muted=1" width="640" height="447"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
                         <p>After the passing of the Civil Rights Act, three African American activists, Charles
                             Wells, Albert Dunn, and Woodrow Willis, were denied entry to the Pickrick restaurant. This
                             restaurant was owned by Lester Maddox, a segregationist and future governor of Georgia. In
@@ -111,7 +114,8 @@
                             The Pickrick. These events became the basis for the one of the first law suits
                             filed under the Civil Rights Act by the NAACP.</p>
                         <img class="img-fluid pl-5 pr-5" src="./../img/pickrick/pickrick_cafe.jpeg">
-                        <p></p> In 1966 after it closed, Georgia Tech purchased the restaurant. The building was later demolished in 2008, Tech demolished to build a green space. At the site now
+                        <p></p> In 1966 after it closed, Georgia Tech purchased the restaurant. The building was later
+                        demolished in 2008, Tech demolished to build a green space. At the site now
                         stands a memorial plaza to the protests.</p>
                         <img class="img-fluid pl-5 pr-5" src="./../img/pickrick/ecocommons.png">
 
@@ -129,13 +133,13 @@
                             reliance on traditional 2D UI, and take advantage of the physical space.</p>
                         <!-- <p style = "margin-bottom: 0px;"><b> My responsibilities:</b></p> -->
                         <p style="margin-bottom: 2px;">My responsibilities:</p>
-                            <ul>
-                                <li>Collaborating with the design team and historians</li>
-                                <li>Offering AR technical guidance to ensure feasibility</li>
-                                <li>Implementing the experience using ARFoundation, C#, Unity, and Blender</li>
-                                <li>Managing the development team and coordinating with various stakeholders</li>
+                        <ul>
+                            <li>Collaborating with the design team and historians</li>
+                            <li>Offering AR technical guidance to ensure feasibility</li>
+                            <li>Implementing the experience using ARFoundation, C#, Unity, and Blender</li>
+                            <li>Managing the development team and coordinating with various stakeholders</li>
                         </ul>
-                       
+
 
                         <div class="mt-2 mb-2 row"></div>
 
@@ -164,24 +168,24 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-10">
+                            <div class="col-10 mb-2">
                                 <!--Start carousel-->
                                 <div id="carousel-pillar" class="carousel slide" data-ride="carousel"
                                     data-interval="false">
 
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <video height=400 controls>
+                                            <video class ="w-100"  controls>
                                                 <source type="video/mp4" src=".././img/pickrick/wall.mp4" />
                                             </video>
                                         </div>
                                         <div class="carousel-item">
-                                            <video height=400 controls>
+                                            <video  class ="w-100" controls>
                                                 <source type="video/mp4" src=".././img/pickrick/pillar_activists.mp4" />
                                             </video>
                                         </div>
                                         <div class="carousel-item">
-                                            <video height=400 controls>
+                                            <video class ="w-100" controls>
                                                 <!-- <source type="video/webm" src="filename.webm" /> -->
                                                 <source type="video/mp4" src=".././img/pickrick/pillar_scanning.mp4" />
                                             </video>
@@ -220,18 +224,19 @@
                             "claustrophobic" and some even became uncomfortable as they had to "push" their way through
                             it.</p>
 
-                        <div class="row">
-                            <video class="mb-3 d-flex align-items-center justify-content-center" height=400 controls>
-                                <!-- <source type="video/webm" src="filename.webm" /> -->
-                                <source type="video/mp4" src=".././img/pickrick/crowds_animation.mp4" />
-                            </video>
-                        </div>
+                       
 
                         <p> The AR format also allows the use of 3D audio and sound design. By using the actual audio of
                             the events, we can increase the user's sense of immersion in the experience.
                             The use of audio also helped us to convey additional aspects of the story, reducing the need
                             for additional
                             text and the reliance on 2D screen content. </p>
+                            <div class="row">
+                                <video class="mb-3 d-flex align-items-center justify-content-center" height=400 controls>
+                                    <!-- <source type="video/webm" src="filename.webm" /> -->
+                                    <source type="video/mp4" src=".././img/pickrick/crowds_animation.mp4" />
+                                </video>
+                            </div>
 
                         <div class="mt-4 mb-4 row"></div>
 
@@ -254,8 +259,10 @@
                             application. We decided to use mobileAR to increase the app's accessibility, but believed
                             that we were
                             sacrificing some of the complete immersion offered by a headset experience.
-                            Despite the ability to see around the ipad, the users seemed to concentrate on the screen and
-                            disregard their surroundings, like when you watch a movie. During testing, we often had to steer
+                            Despite the ability to see around the ipad, the users seemed to concentrate on the screen
+                            and
+                            disregard their surroundings, like when you watch a movie. During testing, we often had to
+                            steer
                             users away
                             from the trees and lampposts as they would walk right into them while exploring the site.
                         </p>
