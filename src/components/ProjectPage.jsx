@@ -10,11 +10,12 @@ function createTeam(teamList) {
 
     let team = [];
     teamList.forEach((element) => {
-        team.push(React.createElement('p', {}, element));
+        team.push(React.createElement('p', { className: "mb-1" }, element));
     });
+
     let formattedTeam = React.createElement(
         'div',
-        { className: 'team', style: { fontSize: 15 } },
+        { className: 'team', style: { fontSize: "1rem" } },
         team
     );
     return formattedTeam;
@@ -27,13 +28,13 @@ function formatLinks(links) {
         formattedLinks.push(
             React.createElement(
                 'a',
-                { className: 'readmore', href: link },
+                { className: 'readmore mr-3 mb-3', href: link, target: "_blank" },
                 text
             )
         );
     });
 
-    return React.createElement('div', { className: 'links' }, formattedLinks);
+    return React.createElement('div', { className: 'links my-2' }, formattedLinks);
 }
 
 export default function Page(props) {
@@ -48,19 +49,17 @@ export default function Page(props) {
     } = props.props;
     let team = createTeam(teamList);
     let formattedLinks = formatLinks(links);
+
     return (
         <>
             {/* header */}
-            <div className="container">
+            <div className="container mx-auto w-10/12">
                 <NavBar />
-                <div className="mt-5 mb-4 row" />
-            </div>
-            <div className="container">
-                <div className="row mb-4">
-                    <div className="col-4">
-                        <h1 className="mb-2"> {projectTitle}</h1>
-                        <h5>{date}</h5>
-                        <p className="mb-4">
+                <div className="grid grid-cols-6 gap-8  mx-auto mt-20">
+                    <div className="col-span-2">
+                        <h1 className="mb-4 text-4xl"> {projectTitle}</h1>
+                        <h5 className="mb-2 text-xl ">{date}</h5>
+                        <p className="mb-6">
                             {' '}
                             {projectType} | {toolsUsed}
                         </p>
@@ -71,17 +70,17 @@ export default function Page(props) {
                         {/* team */}
                         {teamList != null && (
                             <div className="team">
-                                <div className="row mt-5 mb-4" />
-                                <h5 style={{ marginBottom: 4 }}>The Team </h5>
+                                <h5 className="mt-12 text-lg font-bold">The Team </h5>
                                 {team}
                             </div>
                         )}
                     </div>
 
                     {/* body content */}
-                    <div className="col">
+                    <div className="col-span-4">
+
                         <div className="mb-5">
-                            <div className="sticky-content">{content}</div>
+                            <div className="sticky top-0">{content}</div>
                         </div>
                     </div>
                 </div>

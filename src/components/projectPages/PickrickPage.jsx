@@ -1,8 +1,8 @@
 import ProjectPage from "../ProjectPage.jsx"
-import Carousel from "../Carousel.jsx"
+import VideoCarousel from "../VideoCarousel.jsx"
 
-import wallVid from  "../../assets/img/pickrick/wall.mp4";
-import video from  "../../assets/img/pickrick/pillar_activists.mp4";
+import wallVid from "../../assets/img/pickrick/wall.mp4";
+import video from "../../assets/img/pickrick/pillar_activists.mp4";
 import pillarScanning from "../../assets/img/pickrick/pillar_scanning.mp4";
 
 import demoGif from "../../assets/img/pickrick/pickrick_demo.gif";
@@ -14,15 +14,11 @@ import usertest2 from "../../assets/img/pickrick/usertest2.jpeg";
 import usertest3 from "../../assets/img/pickrick/usertest3.png";
 import demoImg from "../../assets/img/pickrick/demo.png";
 
-
-
 let videos = [
-    wallVid,
-    video,
-    pillarScanning
+  wallVid,
+  video,
+  pillarScanning
 ]
-
-
 
 let content = (<>
   <p>
@@ -31,7 +27,7 @@ let content = (<>
     <a href="https://dilac.iac.gatech.edu/">GT DILAC</a>.
   </p>
   <img
-    className="img-fluid pl-5 pr-5 mb-3"
+    className="img-project my-4 w-3/4"
     src={demoGif}
   />
   <p>
@@ -44,32 +40,32 @@ let content = (<>
     of the first law suits filed under the Civil Rights Act by the NAACP.
   </p>
   <img
-    className="img-fluid pl-5 pr-5"
+    className="img-project m-4"
     src={cafeImg}
   />
   <p /> In 1966 after it closed, Georgia Tech purchased the restaurant. The
   building was later demolished in 2008, Tech demolished to build a green space.
   At the site now stands a memorial plaza to the protests.
   <p />
-  <img className="img-fluid pl-5 pr-5" src={ecoImg}/>
-  <div className="mt-4 mb-4 row" />
+  <img className="img-project m-4 mb-10" src={ecoImg} />
   {/* Development */}
-  <h3>Design & Development </h3>
-  <p>
-    {" "}
+  <h3 className="my-2">Design & Development </h3>
+  <p >
     I joined the team in the second year of the project's development as a
     programmer and am now the lead programmer and project manager. This project
     has been a huge undertaking, and I've been lucky to work with an
     interdisciplinary team of designers, historians, and UX researchers. This
     project is developed in Unity and designed for an ipad or tablet
   </p>
+  <br></br>
   <p>
     For this project, we really wanted to explore the capabilities of AR as a
     storytelling media. We had 2 main goals: reduce the reliance on traditional
     2D UI, and take advantage of the physical space.
   </p>
-  <p style={{ marginBottom: 2 }}>My responsibilities:</p>
-  <ul>
+  <br></br>
+  <p className="mb-1 text-lg">My responsibilities:</p>
+  <ul className="list-disc ml-4">
     <li>Collaborating with the design team and historians</li>
     <li>Offering AR technical guidance to ensure feasibility</li>
     <li>
@@ -79,10 +75,11 @@ let content = (<>
       Managing the development team and coordinating with various stakeholders
     </li>
   </ul>
-  <div className="mt-2 mb-2 row" />
+
+  <div className="mb-10" />
 
   {/* User Testing */}
-  <h4>Tailoring content for AR </h4>
+  <h3 className="my-2">Tailoring content for AR </h3>
   <p>
     For the experience we wanted to avoid using 2D screen formats as that would
     defeat the purpose of AR aspect. However, we still had to convey a lot of
@@ -95,13 +92,13 @@ let content = (<>
     track the physical planes.
   </p>
   {/* AR UI slideshow */}
-  <Carousel videos = {videos}/>
-   
+  <VideoCarousel videos={videos} />
+
 
   {/* ending ar ui slideshow */}
-  <div className="mt-2 mb-2 row" />
+  <div className="mb-10" />
   {/* User Testing */}
-  <h4>3D Animation</h4>
+  <h3 className="my-2"> 3D Animation</h3>
   <p>
     We also recreated the events from the protests' video footage into 3D
     animations. With these 3D recreations, users can relive the experience
@@ -113,16 +110,13 @@ let content = (<>
     the scene below, user testers described the crowd as "claustrophobic" and
     some even became uncomfortable as they had to "push" their way through it.
   </p>
-  <div className="row">
-    <video
-      className="col-4 col-md d-flex align-items-center justify-content-center"
-      height={400}
-      controls
-      muted
-    >
-      <source type="video/mp4" src={crowdVid} />
-    </video>
-  </div>
+  <video
+    className="w-10/12 mx-auto my-4"
+    controls
+    muted
+  >
+    <source type="video/mp4" src={crowdVid} />
+  </video>
   <p>
     {" "}
     The AR format also allows the use of 3D audio and sound design. By using the
@@ -131,31 +125,30 @@ let content = (<>
     of the story, reducing the need for additional text and the reliance on 2D
     screen content.{" "}
   </p>
-  <div className="mt-4 mb-4 row" />
+  <div className="mb-10" />
   {/* User Testing */}
-  <h3>User Testing </h3>
+  <h3 className="my-2">User Testing </h3>
   <p>
     During user testing, many users stated that they enjoyed the sense of agency
     that AR gave them and were surprised by how immersive the experience was.
     Many stated that the the ability to move around the AR recreations was their
     favorite part of the app.{" "}
   </p>
-  <div className="row">
+  <div className="flex items-center gap-3 my-4">
     <img
-      className="col-4 col-md d-flex align-items-center justify-content-center"
+      className="w-1/3 aspect-[3/4] object-cover"
       src={usertest1}
     />
     <img
-      className="col-4 col-md d-flex align-items-center justify-content-center"
+      className="w-1/3 aspect-[3/4] object-cover"
       src={usertest3}
     />
     <img
-      className="col-4 col-md d-flex align-items-center justify-content-center"
+      className="w-1/3 aspect-[3/4] object-cover"
       src={usertest2}
     />
   </div>
   <p>
-    {" "}
     I was surprised by their level of immersion as we were only using an ipad to
     run the application. We decided to use mobileAR to increase the app's
     accessibility, but believed that we were sacrificing some of the complete
@@ -165,11 +158,10 @@ let content = (<>
     steer users away from the trees and lampposts as they would walk right into
     them while exploring the site.
   </p>
-  <div className="mt-4 mb-4 row" />
+  <div className="mb-10" />
   {/* Conclusion */}
-  <h3>Conclusion </h3>
+  <h3 className="my-2">Conclusion </h3>
   <p>
-    {" "}
     This project has given me the opportunity to explore diverse AR problem
     spaces and engage in compelling discussions around nonlinear storytelling,
     user agency, and spatial design. I learned that AR storytelling requires a
@@ -179,17 +171,16 @@ let content = (<>
     for all stories, it can greatly elevate the user's emotional experience and
     understanding of the right ones.
   </p>
-  <img className="img-fluid mb-3 pl-4 pr-4" src={demoImg} />
-  <div style={{ paddingBottom: 150 }} />
+  <img className="img-project my-4 mb-48" src={demoImg} />
 </>)
 
 let team = [
-"Janet Murray (Executive Producer)",
-"Angela Dai (Lead Programmer)",
-"Joy Dang (Programmer)",
-"Adithya Chimalakonda (Animator)",
-"Yuchen Zhao (UX Researcher)",
-"Brandy Pettijohn (Historical Researcher)"]
+  "Janet Murray (Executive Producer)",
+  "Angela Dai (Lead Programmer)",
+  "Joy Dang (Programmer)",
+  "Adithya Chimalakonda (Animator)",
+  "Yuchen Zhao (UX Researcher)",
+  "Brandy Pettijohn (Historical Researcher)"]
 
 const pageInfo = {
   teamList: team,
@@ -198,14 +189,14 @@ const pageInfo = {
   projectType: "AR",
   toolsUsed: "C#, Unity, Blender",
   content: content,
-  links:[["Github", "https://github.com/angles-d/Pickrick_Unity"],
-        ["Visit the Website", "https://sites.gatech.edu/pickrickproject/"]]
+  links: [["Github", "https://github.com/angles-d/Pickrick_Unity"],
+  ["Visit the Website", "https://sites.gatech.edu/pickrickproject/"]]
 }
 
-export default function PickrickInfo(){
- 
+export default function PickrickInfo() {
+
 
   return (
-    < ProjectPage props = {pageInfo} />
+    < ProjectPage props={pageInfo} />
   )
 }

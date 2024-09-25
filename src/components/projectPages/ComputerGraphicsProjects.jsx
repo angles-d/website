@@ -17,12 +17,12 @@ const content = (
     <>
         <p>
             These projects are from Georgia Tech's Advanced Computer Graphics
-            Class (CS 6491) with Professor Greg Turk. Fun fact: he was one of the original creators of the Stanford bunny model; he still has the original bunny in his office. 
+            Class (CS 6491) with Professor Greg Turk. Fun fact: he was one of the original creators of the Stanford bunny model; he still has the original bunny in his office.
         </p>
-        <p>   
+        <p>
             Slightly less fun fact, all projects below were completed with Processing in Java.
         </p>
-        <h3>Raytracer </h3>
+        <h3 className='mt-8 my-2'>Raytracer </h3>
         <p>
             This raytracer is coded from scratch, including the implementation
             of scene objects such as triangles, meshes, lights and spheres and
@@ -34,11 +34,11 @@ const content = (
             This allows the rendering of scenes with many objects.
         </p>
         <img
-            className="col-12  d-flex align-items-center justify-content-center"
+            className="img-project my-4"
             src={raytracingImg}
             alt="Raytracing Image"
         />
-        <h5>Shading </h5>
+        <p className='text-lg'> Shading </p>
         <p>
             This raytracer implements phong shading to allow for specular
             highlights. Through the use of disk lighting we create distrubtion
@@ -51,14 +51,14 @@ const content = (
             multiple copies of the same object to be drawn using the original
             geometry file..
         </p>
-        <div className="row d-flex align-items-center justify-content-center">
+        <div className="flex my-4 gap-3">
             <img
-                className="col-6 img-fluid"
+                className="img-project"
                 src={dragonRaytrace}
                 alt="Raytraced dragon Image"
             />
             <img
-                className="col-6 img-fluid "
+                className="img-project "
                 src={raytracingImg2}
                 alt="Second Raytracing Image"
             />
@@ -68,40 +68,40 @@ const content = (
             this raytracer, such as depth of field and motion blur.
         </p>
 
-        <h3>Mesh Manipulation</h3>
+        <h3 className='mt-8 my-2'>Mesh Manipulation</h3>
         <p>
             This mesh is created using the corners mesh representation to store
             mesh connectivity data using an geometry, vertex and opposites
             table. Using this data structure to traverse the mesh, I coded two
             different types of mesh subdivision algothims: loop and butterfly.
         </p>
-        <div className="row no-gutters d-flex align-items-center justify-content-center">
-            <figure className="figure col-4">
-                <img className="img-fluid" src={meshImg} alt="Original Mesh" />
-                <figcaption className="figure-caption text-center">
+        <div className="flex items-center justify-center my-4">
+            <div className="div ">
+                <img className="img-project" src={meshImg} alt="Original Mesh" />
+                <p className="div-caption text-center">
                     Original Mesh
-                </figcaption>
-            </figure>
-            <figure className="figure col-4">
+                </p>
+            </div>
+            <div className="div ">
                 <img
-                    className="img-fluid"
+                    className="img-project"
                     src={loopSubImg}
                     alt="Second Raytracing Image"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Loop Subdivision
-                </figcaption>
-            </figure>
-            <figure className="figure col-4">
+                </p>
+            </div>
+            <div className="div">
                 <img
-                    className="img-fluid"
+                    className="img-project"
                     src={butterflySubImg}
                     alt="Second Raytracing Image"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Butterfly Subdivision
-                </figcaption>
-            </figure>
+                </p>
+            </div>
         </div>
 
         <p>
@@ -109,40 +109,40 @@ const content = (
             traversing them to apply smoothing with the Laplacian and Taubin
             smoothing algorithms.
         </p>
-        <div className="row no-gutters d-flex align-items-center justify-content-center">
-            <figure className="figure col-4">
+        <div className="flex items-center justify-center my-4">
+            <div className="div ">
                 <img
-                    className="img-fluid"
+                    className="img-project"
                     src={randomNoiseImg}
                     alt="Raytraced dragon Image"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Mesh with random noise
-                </figcaption>
-            </figure>
-            <figure className="figure col-4">
+                </p>
+            </div>
+            <div className="div ">
                 <img
-                    className="img-fluid"
+                    className="img-project"
                     src={laplacianImg}
                     alt="Second Raytracing Image"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Laplacian Smoothing
-                </figcaption>
-            </figure>
-            <figure className="figure col-4">
+                </p>
+            </div>
+            <div className="div col-4">
                 <img
-                    className="img-fluid"
+                    className="img-project"
                     src={taubinImg}
                     alt="Second Raytracing Image"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Taubin Smoothing
-                </figcaption>
-            </figure>
+                </p>
+            </div>
         </div>
         <p></p>
-        <h3>Implicit Surfaces</h3>
+        <h3 className='mt-8 my-2'>Implicit Surfaces</h3>
         <p>
             For this project I created different implicit surfaces and used the
             marching cubes algorithm to convert the surface to a rendered mesh.
@@ -151,50 +151,49 @@ const content = (
             and created my own flower mesh out of a combination of various
             distance functions.
         </p>
-        <div className="row">
-            <figure className="figure col-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-4 m-4">
+            <div className="div ">
                 <img
-                    className=" col-md d-flex align-items-center justify-content-center"
+                    className="img-project aspect-square"
                     src={blobbySphereImg}
                     alt="Front of implicit surface flower"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Blobby Spheres
-                </figcaption>
-            </figure>
-            <figure className="figure col-6">
+                </p>
+            </div>
+            <div className="div col-6">
                 <img
-                    className="col-6 col-md d-flex align-items-center justify-content-center"
+                    className="img-project aspect-square"
                     src={lotsBlobsImg}
                     alt="Back of implicit surface flower"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Color blending
-                </figcaption>
-            </figure>
-        </div>
-        <div className="row">
-            <figure className="figure col-6">
+                </p>
+            </div>
+            <div className="div col-6">
                 <img
-                    className="col-6 col-md d-flex align-items-center justify-content-center"
+                    className="img-project aspect-square"
                     src={flower1}
                     alt="Front of implicit surface flower"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Front of implicit surface flower
-                </figcaption>
-            </figure>
-            <figure className="figure col-6">
+                </p>
+            </div>
+            <div className="div col-6">
                 <img
-                    className="col-6 col-md d-flex align-items-center justify-content-center"
+                    className="img-project aspect-square"
                     src={flower2}
                     alt="Back of implicit surface flower"
                 />
-                <figcaption className="figure-caption text-center">
+                <p className="div-caption text-center">
                     Back of implicit surface flower
-                </figcaption>
-            </figure>
+                </p>
+            </div>
         </div>
+        <div className='my-48'></div>
     </>
 );
 

@@ -28,7 +28,7 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="col-5 offset-1">
-                <img className="img-fluid" src={profile}/>
+                <img className="w-full h-auto" src={profile}/>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ const pageContent = [
     Library Archives.{" "}
   </p>,
   <img
-    className="img-fluid mt-2 mb-4 pl-4 pr-4"
+    className="img-project"
     src={archiveImg}
   />,
   <p>
@@ -30,29 +30,29 @@ const pageContent = [
   </p>]
 
 const archivesTeam = ["Angela Dai (Team Lead: Modeling)",
-"Joseph Liu (Team Lead: Unity)",
-"Seth Morill (Team Lead: Unity)",
-"Jacqueline Le (Modeler)",
-"Elise Polo (Modeler)",
-"Alison Jasadipura (Programmer)",
-"John Pham (Programmer)",
-"Rutika Karande (Programmer)",]
+  "Joseph Liu (Team Lead: Unity)",
+  "Seth Morill (Team Lead: Unity)",
+  "Jacqueline Le (Modeler)",
+  "Elise Polo (Modeler)",
+  "Alison Jasadipura (Programmer)",
+  "John Pham (Programmer)",
+  "Rutika Karande (Programmer)",]
 
 const pageInfo = {
   teamList: archivesTeam,
   projectTitle: "The \n Georgia Tech Archives",
-  date: ["Fall 2022: ",<i>In Progress</i>],
+  date: ["Fall 2022"],
   projectType: "VR",
   toolsUsed: "C#, Unity, Blender",
   content: pageContent,
-  links:[["Github", "https://github.com/EmpathyBytes/VR-Archive"],
-        ["Georgia Tech Archives", "https://history.library.gatech.edu/collections/show/9"],
-        [ "EmpathyBytes Info", "https://educast.library.gatech.edu/" ]]
+  links: [["Github", "https://github.com/EmpathyBytes/VR-Archive"],
+  ["Georgia Tech Archives", "https://history.library.gatech.edu/collections/show/9"],
+  ["EmpathyBytes Info", "https://educast.library.gatech.edu/"]]
 }
 
-export default function ArchivesPage(){
-  
+export default function ArchivesPage() {
+
   return (<>
-    < ProjectPage props = {pageInfo} />
-    </>)
+    < ProjectPage props={pageInfo} />
+  </>)
 }

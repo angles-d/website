@@ -21,7 +21,7 @@ const content = (
             Class (CS 7496)
         </p>
 
-        <h3>Splines</h3>
+        <h3 className='mt-8 my-2'>Splines</h3>
         <p>
             I joined the team in the second year of the project's development as
             a programmer and am now the lead programmer and project manager.
@@ -31,17 +31,17 @@ const content = (
             iPad or tablet.
         </p>
         <img
-            className="col-8 d-flex align-items-center justify-content-center"
+            className="img-project"
             src={splinesGif}
             alt="Splines Animation"
         />
         <img
-            className="col-8 d-flex align-items-center justify-content-center"
+            className="img-project"
             src={hermitePng}
             alt="Hermite"
         />
 
-        <h3>Integrators</h3>
+        <h3 className='mt-8 my-2'>Integrators</h3>
         <p>
             I joined the team in the second year of the project's development as
             a programmer and am now the lead programmer and project manager.
@@ -51,22 +51,22 @@ const content = (
             iPad or tablet.
         </p>
         <img
-            className="col-8 d-flex align-items-center justify-content-center"
+            className="img-project"
             src={accGraphGif}
             alt="Acceleration Graph"
         />
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={freeFallGif}
             alt="Free Fall Animation"
         />
         <img
-            className="col-8 d-flex align-items-center justify-content-center"
+            className="img-project"
             src={freeFallGraphPng}
             alt="Free Fall Graph"
         />
 
-        <h3>Constrained Particle System</h3>
+        <h3 className='mt-8 my-2'>Constrained Particle System</h3>
         <p>
             I joined the team in the second year of the project's development as
             a programmer and am now the lead programmer and project manager.
@@ -76,12 +76,12 @@ const content = (
             iPad or tablet.
         </p>
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={beadOnWireGif}
             alt="Bead on Wire Animation"
         />
 
-        <h3>Rigid Bodies</h3>
+        <h3 className='mt-8 my-2'>Rigid Bodies</h3>
         <p>
             I joined the team in the second year of the project's development as
             a programmer and am now the lead programmer and project manager.
@@ -91,17 +91,17 @@ const content = (
             iPad or tablet.
         </p>
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={rigidBodySetupPng}
             alt="Rigid Body Setup"
         />
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={rbGif}
             alt="Rigid Body Animation"
         />
 
-        <h3>Inverse Kinematics</h3>
+        <h3 className='mt-8 my-2'>Inverse Kinematics</h3>
         <p>
             I joined the team in the second year of the project's development as
             a programmer and am now the lead programmer and project manager.
@@ -111,12 +111,12 @@ const content = (
             iPad or tablet.
         </p>
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={ikGif}
             alt="Inverse Kinematics Animation"
         />
         <img
-            className="col-md d-flex align-items-center justify-content-center"
+            className="img-project"
             src={mocapCartwheelGif}
             alt="Mocap Cartwheel"
         />
