@@ -1,31 +1,10 @@
 body {
-  /* font-family: "Inconsolata", monospace; */
   color: #0d1e2d;
 }
 
 a {
-  color: rgb(76, 76, 76);
+  color: rgb(28, 27, 26);
   text-decoration: none;
-}
-
-
-a:hover {
-  color: #000;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.font-heading {
-  /* font-family: "Raleway", sans-serif; */
-}
-
-.p{
-  margin: 0;
-  padding: 0;
 }
 
 .section {
@@ -162,19 +141,6 @@ h6,
   visibility: visible;
 }
 
-
-.h3 {
-  font-size: 20px;
-}
-
-.h4 {
-  font-size: 16px;
-}
-
-.heading {
-  font-size: 28px;
-}
-
 .readmore {
   display: inline-block;
   border: 1px solid #000;
@@ -192,13 +158,6 @@ h6,
   outline: none;
 }
 
-
-.sticky-content {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  /* required */
-}
 
 .list-line li {
   margin-bottom: 10px;
@@ -246,36 +205,6 @@ h6,
   color: rgb(43, 43, 43);
 }
 
-.container{
-  
-}
-
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-.quarter {
-  max-width: 100%;
-}
-
 .art-wrap {
   display: block;
   position: relative;
@@ -314,7 +243,6 @@ h6,
   text-transform: uppercase;
 }
 
-
 .art-wrap:hover .art-background,
 .art-text {
   visibility: visible;
@@ -326,6 +254,5 @@ h6,
   height: auto;
   margin-right: auto;
   margin-left: auto;
- 
 }
 

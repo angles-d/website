@@ -204,8 +204,8 @@ const links = [
 const pageInfo = {
     teamList: null,
     projectTitle: ['Computer Graphics', <br />, 'Projects'],
-    date: ['Spring 2022 | Class'],
-    projectType: 'Computer Graphics',
+    date: ['Spring 2022'],
+    projectType: 'Class',
     toolsUsed: 'Java',
     content: content,
     links: links

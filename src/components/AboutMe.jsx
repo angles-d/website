@@ -1,38 +1,36 @@
-import { useState } from 'react'
 import NavBar from './NavBar.jsx'
 import profile from "../assets/img/profile-blob.png"
 
 export default function AboutMe() {
-  return (
-    <>
-    <div className="container">
-    <NavBar/>
-    <div className="mt-5 mb-5 row"></div>
-        <div className="row mb-5">
-            <div className="col-6">
-                <h2 className="mb-4">About Me</h2>
-                <p>👋 Hey I'm Angela. I'm a third-year Computer Science major at Georgia Tech
-                    concentrating in media and intelligence and will be studying for a masters in computer Graphics next semester. I'm interested in the
-                    intersection between art and tech and how we can use it to produce novel creative experiences. I'm currently looking for a full time position.
-                </p>
-                <p className="mb-3">In my free time, I enjoy drawing, listening to podcasts, and
-                    baking any bread that isn't sourdough.
-                </p>
-                <p className="mb-5" >
-                  <a href="./Dai_Resume.pdf" className="readmore" download>Download my Resume</a>
-                </p>
-                <div style={{"opacity": "0.75"}}>
-                    <p className="mb-1">Find me on:</p>
-                    <a href="https://www.linkedin.com/in/adai24/" target= "_blanks" class= "readmore">Linkedin</a>
-                    <a href="https://github.com/angles-d" className="readmore">Github</a>
+    return (
+        <div className="container mx-auto w-9/12 ">
+            <NavBar />
+            <div className="grid grid-cols-5 gap-12 mt-24 items-center">
+                <div className="col-span-3 mr-3 ">
+                    <h1 className="mb-8 text-4xl">About Me</h1>
+                    <p className=''>👋 Hey I'm Angela.
+                        <br></br>
+                        <br></br>
+                        I'm a new grad from Georgia Tech with a masters in Computer Science. I'm interested in the
+                        intersection between art and tech and how we can use it to produce novel creative experiences.
+                        I've interned at companies such as the New York Times, NASA and Georgia Tech. I'm currently looking for a full time position.
+                    </p>
+                    <p className="my-6">In my free time, I enjoy drawing, listening to podcasts, and trying new recipes.
+                    </p>
+                    <p className="mb-6" >
+                        <a href="./Dai_Resume.pdf" className="readmore" download>Download my Resume</a>
+                    </p>
+                    <div >
+                        <p className="mb-1 ">Find me on:</p>
+                        <a href="https://www.linkedin.com/in/adai24/" target="_blanks" className="readmore mr-2">Linkedin</a>
+                        <a href="https://github.com/angles-d" className="readmore mr-2">Github</a>
+                    </div>
+                </div>
+                <div className="col-span-2">
+                    <img className="w-full h-auto" src={profile} />
                 </div>
             </div>
-            <div className="col-5 offset-1">
-                <img className="w-full h-auto" src={profile}/>
-            </div>
         </div>
-    </div>
-    </>
-  )
+    )
 }
 
