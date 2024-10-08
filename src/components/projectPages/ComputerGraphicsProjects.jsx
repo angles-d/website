@@ -1,19 +1,18 @@
-import ProjectPage from '../ProjectPage.jsx';
-import raytracingImg from '../../assets/img/compGraphics/ray_tracing.png';
-import raytracingImg2 from '../../assets/img/compGraphics/ray_tracing2.png';
-import dragonRaytrace from '../../assets/img/compGraphics/dragon_raytrace.png';
 import blobbySphereImg from '../../assets/img/compGraphics/blobby_sphere.png';
-import lotsBlobsImg from '../../assets/img/compGraphics/lots_blobs.png';
+import butterflySubImg from '../../assets/img/compGraphics/butterfly_sub.png';
+import dragonRaytrace from '../../assets/img/compGraphics/dragon_raytrace.png';
 import flower1 from '../../assets/img/compGraphics/flower1.png';
 import flower2 from '../../assets/img/compGraphics/flower2.png';
-import meshImg from '../../assets/img/compGraphics/mesh.png';
-import butterflySubImg from '../../assets/img/compGraphics/butterfly_sub.png';
-import loopSubImg from '../../assets/img/compGraphics/loop_sub.png';
-import randomNoiseImg from '../../assets/img/compGraphics/random_noise.png';
-import taubinImg from '../../assets/img/compGraphics/taubin.png';
-import laplacianImg from '../../assets/img/compGraphics/laplacian.png';
 import instanceImg from '../../assets/img/compGraphics/instancing.png';
-import { Separator } from "@/components/ui/separator"
+import laplacianImg from '../../assets/img/compGraphics/laplacian.png';
+import loopSubImg from '../../assets/img/compGraphics/loop_sub.png';
+import lotsBlobsImg from '../../assets/img/compGraphics/lots_blobs.png';
+import meshImg from '../../assets/img/compGraphics/mesh.png';
+import randomNoiseImg from '../../assets/img/compGraphics/random_noise.png';
+import raytracingImg from '../../assets/img/compGraphics/ray_tracing.png';
+import raytracingImg2 from '../../assets/img/compGraphics/ray_tracing2.png';
+import taubinImg from '../../assets/img/compGraphics/taubin.png';
+import ProjectPage from '../ProjectPage.jsx';
 
 const content = (
     <>
@@ -63,7 +62,7 @@ const content = (
                         src={dragonRaytrace}
                         alt="Raytraced dragon Image"
                     />
-                    <p className="div-caption text-center">
+                    <p className="text-sm div-caption text-center">
                         Both meshes and the floor have a high reflectance value creating a series of mirrored reflections.
                     </p>
                 </div>
@@ -73,8 +72,8 @@ const content = (
                         src={raytracingImg2}
                         alt="Second Raytracing Image"
                     />
-                    <p className="div-caption text-center">
-                        The spheres below display both diffuse and specular shading. The floor has a high gloss factor softening the reflection of the spheres.
+                    <p className="text-sm div-caption text-center">
+                        Diffuse and specular shading. The floor has a high gloss factor softening the reflection of the spheres.
                     </p>
                 </div>
             </div>
@@ -91,7 +90,7 @@ const content = (
                 src={instanceImg}
                 alt="Raytracing Image"
             />
-            <p className="div-caption text-center">
+            <p className="text-sm div-caption text-center">
                 This bunny is a 64k mesh instanced 7 times.
             </p>
         </div>
@@ -103,7 +102,7 @@ const content = (
         <div className="flex items-center justify-center my-4">
             <div className="div ">
                 <img className="img-project" src={meshImg} alt="Original Mesh" />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Original Mesh
                 </p>
             </div>
@@ -113,7 +112,7 @@ const content = (
                     src={loopSubImg}
                     alt="Second Raytracing Image"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Loop Subdivision
                 </p>
             </div>
@@ -123,7 +122,7 @@ const content = (
                     src={butterflySubImg}
                     alt="Second Raytracing Image"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Butterfly Subdivision
                 </p>
             </div>
@@ -141,7 +140,7 @@ const content = (
                     src={randomNoiseImg}
                     alt="Raytraced dragon Image"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Mesh with random noise
                 </p>
             </div>
@@ -151,7 +150,7 @@ const content = (
                     src={laplacianImg}
                     alt="Second Raytracing Image"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     3x Laplacian Smoothing
                 </p>
             </div>
@@ -161,7 +160,7 @@ const content = (
                     src={taubinImg}
                     alt="Second Raytracing Image"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     3x Taubin Smoothing
                 </p>
             </div>
@@ -185,7 +184,7 @@ const content = (
                     src={blobbySphereImg}
                     alt="Front of implicit surface flower"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Blobby Spheres
                 </p>
             </div>
@@ -195,7 +194,7 @@ const content = (
                     src={lotsBlobsImg}
                     alt="Back of implicit surface flower"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Color blending
                 </p>
             </div>
@@ -205,7 +204,7 @@ const content = (
                     src={flower1}
                     alt="Front of implicit surface flower"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Front of implicit surface flower
                 </p>
             </div>
@@ -215,12 +214,12 @@ const content = (
                     src={flower2}
                     alt="Back of implicit surface flower"
                 />
-                <p className="div-caption text-center">
+                <p className="text-sm div-caption text-center">
                     Back of implicit surface flower
                 </p>
             </div>
         </div>
-        <div className='my-48'></div>
+        <div className='mb-24'></div>
     </>
 );
 

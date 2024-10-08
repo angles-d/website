@@ -14,7 +14,7 @@ const content = [
   <p>
     To implement the multiplayer functionality, we used Apple's Multiplayer connectivity Framework coupled with ARFoundation Samples library. We used both physics and AR rays to detect potential collisions between both AR and real-world objects allowing the player to interact with both the AR blocks and world around them. Plane tracking was used to create the initial game board and placeable area for the blocks.
   </p>,
-  <img className="img-project p-4 w-1/2" src={letsBuildGif} />
+  <img className="img-project p-4 w-1/2 mb-24" src={letsBuildGif} />
 ]
 
 const team = ["Angela Dai (Programmer)",

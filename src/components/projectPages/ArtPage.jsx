@@ -1,9 +1,9 @@
-import NavBar from "../NavBar"
-import shapeImage from "../../assets/img/art/shapes.jpg";
-import yellowImage from "../../assets/img/art/yellow.png";
 import bluemingImage from "../../assets/img/art/blueming.gif";
-import umbrellaImage from "../../assets/img/art/umbrella-2.gif";
 import faceImage from "../../assets/img/art/face.jpg";
+import shapeImage from "../../assets/img/art/shapes.jpg";
+import umbrellaImage from "../../assets/img/art/umbrella-2.gif";
+import yellowImage from "../../assets/img/art/yellow.png";
+import NavBar from "../NavBar";
 
 function ArtSquare(props) {
     return (

@@ -29,7 +29,7 @@ const content = [
     The models for the project were created in Blender and modeled using
     reference photos from the makerspace.
   </p>,
-  <div className="flex img-project mx-auto mt-4 mb-2">
+  <div className="flex img-project mx-auto my-4">
     <div className="w-1/2 pr-1">
       <img className=" " src={refImg} />
     </div>
@@ -37,7 +37,7 @@ const content = [
       <img className="" src={modelImg} />
     </div>
   </div>,
-  <img className="img-project" src={blenderImg} />,
+  <img className="img-project mb-24" src={blenderImg} />,
 ];
 const team = [
   "Angela Dai (Team Lead: Modeling)",

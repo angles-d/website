@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react";
-import NavBar from "./NavBar.jsx";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
 	NavigationMenuItem,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+import { useEffect, useState } from "react";
+import NavBar from "./NavBar.jsx";
 import { Button } from "./ui/button.jsx";
 
 // Importing images
-import pickrickImage from "../assets/img/pickrick/Pickrick.jpeg";
-import letsbuildImage from "../assets/img/letsbuild/letsbuild.png";
-import archivesImage from "../assets/img/archives/old_campus.jpg";
-import hiveImage from "../assets/img/hive/hive.png";
-import mccloudImage from "../assets/img/mccloud/hubs.png";
 import animationImage from "../assets/img/animation/mocap_walking.gif";
-import compGraphicsImage from "../assets/img/compGraphics/sphere.png";
+import archivesImage from "../assets/img/archives/old_campus.jpg";
 import artImage from "../assets/img/art/art.jpg";
-import compPhotImage from "../assets/img/compPhotography/conway_slow.mp4"
+import compGraphicsImage from "../assets/img/compGraphics/sphere.png";
+import compPhotImage from "../assets/img/compPhotography/conway_slow.mp4";
+import hiveImage from "../assets/img/hive/hive.png";
+import letsbuildImage from "../assets/img/letsbuild/letsbuild.png";
+import mccloudImage from "../assets/img/mccloud/hubs.png";
+import pickrickImage from "../assets/img/pickrick/Pickrick.jpeg";
 
 const words = ["ngela",
 	" Cat Photographer",
@@ -100,7 +100,7 @@ function Name(props) {
 				<h1 className="whitespace-pre">{text}</h1>
 			</div>
 
-			<p className="mb-8 w-7/12 text-lg"> I'm a programmer interested in how we can use tech to produce novel creative user experiences. Currently looking for fulltime roles.
+			<p className="mb-8 w-7/12 text-lg"> I'm a programmer interested in how we can use tech to produce novel user experiences. I've interned at companies such as the New York Times, NASA and Georgia Tech. Currently looking for fulltime roles.
 			</p>
 
 			<p className="mb-6" >
@@ -170,14 +170,6 @@ const projectList = [
 		projectTitle: "The Pickrick Protests",
 		projectUrl: "./#/project/pickrick-protests",
 		imageUrl: pickrickImage,
-		language: "C#",
-		projectAttrs: ["XR"],
-		projectType: "XR"
-	},
-	{
-		projectTitle: "The Georgia Tech Archives",
-		projectUrl: "./#/project/archives",
-		imageUrl: archivesImage,
 		language: "C#",
 		projectAttrs: ["XR"],
 		projectType: "XR"

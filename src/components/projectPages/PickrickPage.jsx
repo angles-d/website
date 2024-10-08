@@ -1,18 +1,18 @@
-import ProjectPage from "../ProjectPage.jsx"
-import VideoCarousel from "../VideoCarousel.jsx"
+import ProjectPage from "../ProjectPage.jsx";
+import VideoCarousel from "../VideoCarousel.jsx";
 
-import wallVid from "../../assets/img/pickrick/wall.mp4";
 import video from "../../assets/img/pickrick/pillar_activists.mp4";
 import pillarScanning from "../../assets/img/pickrick/pillar_scanning.mp4";
+import wallVid from "../../assets/img/pickrick/wall.mp4";
 
-import demoGif from "../../assets/img/pickrick/pickrick_demo.gif";
-import cafeImg from "../../assets/img/pickrick/pickrick_cafe.jpeg";
-import ecoImg from "../../assets/img/pickrick/ecocommons.png";
 import crowdVid from "../../assets/img/pickrick/crowds_animation.mp4";
+import demoImg from "../../assets/img/pickrick/demo.png";
+import ecoImg from "../../assets/img/pickrick/ecocommons.png";
+import cafeImg from "../../assets/img/pickrick/pickrick_cafe.jpeg";
+import demoVid from "../../assets/img/pickrick/demo_vid.mp4";
 import usertest1 from "../../assets/img/pickrick/usertest1.jpg";
 import usertest2 from "../../assets/img/pickrick/usertest2.jpeg";
 import usertest3 from "../../assets/img/pickrick/usertest3.png";
-import demoImg from "../../assets/img/pickrick/demo.png";
 
 let videos = [
   wallVid,
@@ -26,9 +26,13 @@ let content = (<>
     recreates the 1965 Atlanta Pickrick Protests produced by{" "}
     <a href="https://dilac.iac.gatech.edu/">GT DILAC</a>.
   </p>
-  <img
-    className="img-project my-4 w-3/4"
-    src={demoGif}
+  <video
+    className="img-project w-3/4 my-4"
+    src={demoVid}
+    alt="Seam Carving visualized with red seams"
+    autoPlay
+    loop
+    controls
   />
   <p>
     After the passing of the Civil Rights Act, three African American activists,
@@ -110,13 +114,19 @@ let content = (<>
     the scene below, user testers described the crowd as "claustrophobic" and
     some even became uncomfortable as they had to "push" their way through it.
   </p>
-  <video
-    className="w-10/12 mx-auto my-4"
-    controls
-    muted
-  >
-    <source type="video/mp4" src={crowdVid} />
-  </video>
+  <div className=" my-4">
+    <video
+      className="w-10/12 mx-auto "
+      controls
+    >
+      <source type="video/mp4" src={crowdVid} />
+
+    </video>
+    <p className="text-sm  div-caption text-center mt-2">
+      For the full experience play with the sound on.
+    </p>
+  </div>
+
   <p>
     {" "}
     The AR format also allows the use of 3D audio and sound design. By using the
@@ -171,15 +181,15 @@ let content = (<>
     for all stories, it can greatly elevate the user's emotional experience and
     understanding of the right ones.
   </p>
-  <img className="img-project my-4 mb-48" src={demoImg} />
+  <img className="img-project mt-4 mb-24" src={demoImg} />
 </>)
 
 let team = [
   "Janet Murray (Executive Producer)",
-  "Angela Dai (Lead Programmer)",
+  "Angela Dai (Lead Programmer & PM)",
   "Joy Dang (Programmer)",
   "Adithya Chimalakonda (Animator)",
-  "Yuchen Zhao (UX Researcher)",
+  "Yuchen Zhao (UX Researcher & PM)",
   "Brandy Pettijohn (Historical Researcher)"]
 
 const pageInfo = {

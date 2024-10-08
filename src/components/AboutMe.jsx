@@ -1,5 +1,5 @@
-import NavBar from './NavBar.jsx'
 import profile from "../assets/img/profile-blob.png"
+import NavBar from './NavBar.jsx'
 
 export default function AboutMe() {
     return (
@@ -10,8 +10,7 @@ export default function AboutMe() {
                     <h1 className="mb-8 text-4xl">About Me</h1>
                     <p className=''>
                         I'm a new grad from Georgia Tech with a masters in Computer Science. I'm interested in the
-                        intersection between art and tech and how we can use it to produce novel creative experiences.
-                        I've interned at companies such as the New York Times, NASA and Georgia Tech. I'm currently looking for a full time position.
+                        intersection between art and tech and how we can use it to produce novel creative experiences. I have experience with XR, LLM's, ML, and CV. I've interned at companies such as the New York Times, NASA and Georgia Tech. I'm currently looking for a full time position.
                     </p>
                     <p className="my-6">In my free time, I enjoy drawing, listening to podcasts, and trying new recipes.
                     </p>

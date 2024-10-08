@@ -31,7 +31,7 @@ const content = [
     reality, intermediate models such as emoticons and emojis were added between the model of the text "face" and the final realistic face.
   </p>,
 
-  <img className="img-project w-1/2 my-4" id="mirror" src={mirrorImg} />,
+  <img className="img-project w-1/2 mt-4 mb-24" id="mirror" src={mirrorImg} />,
 ]
 
 const team = ["Daniel Phelps (Project Manager)",

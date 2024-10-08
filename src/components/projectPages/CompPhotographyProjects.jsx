@@ -16,6 +16,7 @@ import castleOg from '../../assets/img/compPhotography/castle_og.png'
 import castleRed from '../../assets/img/compPhotography/castle_red.mp4'
 import castleFinal from '../../assets/img/compPhotography/castle_final.png'
 import diagramImg from '../../assets/img/compPhotography/inpainting_diagram.png'
+import castleCrop from '../../assets/img/compPhotography/crop1.png'
 
 import { MoveRight } from 'lucide-react';
 import { MoveDown } from 'lucide-react';
@@ -45,8 +46,8 @@ const content = (
                     src={fillOg2}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs  div-caption text-center">
-                    Original image: Hover to see the target region
+                <p className="text-xs  div-caption text-center mt-1">
+                    Original image. Hover to see the fill region
                 </p>
 
             </div>
@@ -62,8 +63,8 @@ const content = (
                     src={fillRes2}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center ">
-                    Inpainting result: Hover to see the original image
+                <p className="text-xs div-caption text-center mt-1">
+                    Inpainting result. Hover to see the original image
                 </p>
             </div>
 
@@ -120,8 +121,31 @@ const content = (
             This project is based on Avidan and Shamir's paper: <a href="https://dl.acm.org/doi/pdf/10.1145/1275808.1276390" target="_blank" className="underline">
                 Seam Carving for Content-Aware Image Resizing
             </a>.
-            Traditional cropping methods do not consider the content when resizing an image, usually removing important features in the final result.
+            Traditional cropping methods do not consider the content when resizing an image, usually removing important features in the final result. Inm the example with traditional cropping, we cannot keep both the castle and the mountain in the cropped image.
         </p>
+        <div className='flex my-4 mx-auto justify-between'>
+            <div>
+                <img
+                    className="img-project  h-auto"
+                    src={castleOg}
+                    alt="Seam Carving visualized with red seams"
+                />
+                <p className="text-sm div-caption text-center mt-1">
+                    Original Image
+                </p>
+            </div>
+            <MoveRight className="mx-4 size-10 my-auto"></MoveRight>
+            <div >
+                <img
+                    className="img-project"
+                    src={castleCrop}
+                    alt="Seam Carving visualized with red seams"
+                />
+                <p className="text-sm div-caption text-center mt-1">
+                    Two Potential Image Crops
+                </p>
+            </div>
+        </div>
         <p>
             Seam carving solves this issue by removing seams of low energy and preserving the areas of the image with high visual interest.
         </p>
@@ -133,7 +157,7 @@ const content = (
                     src={castleOg}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
+                <p className="text-sm div-caption text-center mt-1">
                     Original Image
                 </p>
             </div>
@@ -144,7 +168,7 @@ const content = (
                     src={castleFinal}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
+                <p className="text-sm div-caption text-center mt-1">
                     Seam Carving Result
                 </p>
             </div>
@@ -155,7 +179,7 @@ const content = (
         </p>
 
         <p className='my-3'>
-            This technique causes areas of low frequency to be removed first leaving the areas of high interest, which are usually the main subjects. In the video below notice how areas of the sky and sea are removed first.
+            This technique causes areas of low frequency to be removed first leaving the areas of high interest, which are usually the main subjects. In the video below notice how areas of the sky and sea are removed first. The red seams are those identified with the lowest energy.
         </p>
         <video
             className="img-project w-3/4 my-4"
@@ -175,7 +199,7 @@ const content = (
                     src={dolphin}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
+                <p className="text-sm  div-caption text-center mt-1">
                     Original Image
                 </p>
             </div>
@@ -191,8 +215,8 @@ const content = (
                     src={dolphinBack}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
-                    Insertion Result: Hover to the inserted seams.
+                <p className="text-sm  div-caption text-center mt-1">
+                    Insertion Result. Hover to the inserted seams.
                 </p>
             </div>
 
@@ -209,7 +233,7 @@ const content = (
                     src={catOg}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
+                <p className="text-sm  div-caption text-center mt-1">
                     Original Image
                 </p>
             </div>
@@ -220,7 +244,7 @@ const content = (
                     src={catBack}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
+                <p className="text-sm  div-caption text-center mt-1">
                     Seam Carving Result
                 </p>
             </div>
@@ -239,8 +263,8 @@ const content = (
                     src={catBack}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
-                    Seam carving backward energy
+                <p className="text-sm div-caption text-center mt-1">
+                    Seam carving: Backward Energy
                 </p>
             </div>
             <div >
@@ -249,14 +273,14 @@ const content = (
                     src={catForward}
                     alt="Seam Carving visualized with red seams"
                 />
-                <p className="text-xs div-caption text-center mt-1">
-                    Seam carving forward energy
+                <p className="text-sm  div-caption text-center mt-1">
+                    Seam carving: Forward Energy
                 </p>
             </div>
         </div>
         <p> While some of the cats are still a little wonky, the forwards energy method gives a much improved result. Since this method accounts for the current pixels absence when finding areas of low energy, it performs much better than backward energy in instances of subjects with solid color.</p>
 
-        <div className='my-24'></div>
+        <div className='mb-24'></div>
 
     </>
 );
