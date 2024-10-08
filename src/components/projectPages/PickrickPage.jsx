@@ -5,6 +5,7 @@ import video from "../../assets/img/pickrick/pillar_activists.mp4";
 import pillarScanning from "../../assets/img/pickrick/pillar_scanning.mp4";
 import wallVid from "../../assets/img/pickrick/wall.mp4";
 
+
 import crowdVid from "../../assets/img/pickrick/crowds_animation.mp4";
 import demoImg from "../../assets/img/pickrick/demo.png";
 import ecoImg from "../../assets/img/pickrick/ecocommons.png";
