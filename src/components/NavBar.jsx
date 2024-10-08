@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import resume from '../assets/Dai_Resume.pdf'
 
 
 export default function NavBar() {
@@ -9,7 +10,7 @@ export default function NavBar() {
             <HashLink to="/#projects">Projects</HashLink>
             <Link to="/about-me">About Me</Link>
             <Link to="/contact">Contact</Link>
-            <a href="/website/Dai_Resume.pdf" target="_blank">Resume</a>
+            <a href={resume} target="_blank">Resume</a>
         </div>)
 
 }

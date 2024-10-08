@@ -9,9 +9,8 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar.jsx";
 import { Button } from "./ui/button.jsx";
 
-// Importing images
+import resume from '../assets/Dai_Resume.pdf';
 import animationImage from "../assets/img/animation/mocap_walking.gif";
-import archivesImage from "../assets/img/archives/old_campus.jpg";
 import artImage from "../assets/img/art/art.jpg";
 import compGraphicsImage from "../assets/img/compGraphics/sphere.png";
 import compPhotImage from "../assets/img/compPhotography/conway_slow.mp4";
@@ -105,7 +104,7 @@ function Name(props) {
 
 			<p className="mb-6" >
 				<a className="contact underline mr-4" href="mailto:adai24@gatech.edu" >adai24@gatech.edu</a>
-				<a href="./Dai_Resume.pdf" className="mr-4 underline" download>Resume</a>
+				<a href={resume} className="mr-4 underline" download>Resume</a>
 			</p>
 		</div >);
 }

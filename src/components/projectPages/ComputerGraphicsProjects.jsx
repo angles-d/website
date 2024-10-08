@@ -12,6 +12,10 @@ import randomNoiseImg from '../../assets/img/compGraphics/random_noise.png';
 import raytracingImg from '../../assets/img/compGraphics/ray_tracing.png';
 import raytracingImg2 from '../../assets/img/compGraphics/ray_tracing2.png';
 import taubinImg from '../../assets/img/compGraphics/taubin.png';
+
+import bunny500 from '../../assets/img/compGraphics/bunny_500.png';
+import bunny69k from '../../assets/img/compGraphics/bunny_69k.png';
+
 import ProjectPage from '../ProjectPage.jsx';
 
 const content = (
@@ -20,9 +24,9 @@ const content = (
             These projects are from Georgia Tech's Advanced Computer Graphics
             Class (CS 6491) with Professor Greg Turk. Fun fact: he was one of the original creators of the Stanford bunny model; he still has the original bunny in his office. A slightly less fun fact, all projects below were completed using Processing in Java.
         </p>
-        <h3 className='mt-8 my-2'>Raytracer </h3>
+        <h3 className='mt-8 my-2'>Ray Tracer </h3>
         <p>
-            A raytracer is a rendering method which uses ray-object intersections to detect and render objects. The ray intersection method allows for a more realistic rendering of the scene especially for shadows and shiny surfaces. By tracking the rays intersections as it bounces through the scene like rays of light allowing for a more nuanced rendering than classic rasterization.
+            A ray tracer is a rendering method which uses ray-object intersections to detect and render objects. The ray intersection method allows for a more realistic rendering of the scene especially for shadows and shiny surfaces. By tracking the rays intersections as it bounces through the scene like rays of light allowing for a more nuanced rendering than classic rasterization.
             <div>
                 <img
                     className="img-project my-4"
@@ -31,27 +35,49 @@ const content = (
                 />
             </div>
 
-            This raytracer is coded from scratch, including the implementation
+            This ray tracer is coded from scratch, including the implementation
             of scene primitives such as rays, triangles, and lights and
-            functionality such as matrix transformations. This raytracer
+            functionality such as matrix transformations. This ray tracer
             implements phong shading to allow for specular highlights and distribution raytracing for soft shadows. It also has a variety of visual effects such as depth of field and motion blur.
         </p>
         <br></br>
         <div>
             <p className='text-lg font-semibold'> Acceleration </p>
             <p>
-                This raytracer uses a bounding volume hierarchy to speed up raytracing. Due to the binary nature of the BVH tree structure, the runtime for scenes increases logoramthically instead of linearly per polygon , allowing a mesh with 64k polygons to only take 2x the time of a mesh with a 1k polygons despite having 64x the polygons to test against.
+                This ray tracer uses a bounding volume hierarchy to speed up ray tracing. Due to the binary nature of the BVH tree structure, the runtime for scenes increases logarithmically instead of linearly per polygon, allowing a mesh with 69k polygons to take less than 1.5x the time of a mesh with a 500 polygons despite having 138x the number polygons to test against.
 
                 By using this acceleration structure, the rendering time is reduced
-                from 5s with out acceleration to under 0.2s for a 100k poly mesh (ex: the dragon below). This allows the rendering of scenes with many objects, even with effects such as mirroring or soft shadows which further increase the ray intersection count.
+                significantly. This allows the rendering of scenes with many objects, even with effects such as mirroring or soft shadows which further increase the ray intersection count.
             </p>
+            <div className="my-4 gap-3 grid grid-cols-2">
+                <div>
+                    <img
+                        className="img-project"
+                        src={bunny500}
+                        alt="Raytraced dragon Image"
+                    />
+                    <p className="text-sm div-caption text-center mt-1">
+                        500 poly bunny. Render time: 0.47s.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        className="img-project "
+                        src={bunny69k}
+                        alt="Second Raytracing Image"
+                    />
+                    <p className="text-sm div-caption text-center mt-1">
+                        69k poly bunny. Render time: 0.646s.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <br></br>
         <div>
             <p className='text-lg font-semibold'> Shading </p>
             <p>
-                This raytracer implements Phong shading to allow for both specular
+                This ray tracer implements Phong shading to allow for both specular
                 highlights and diffuse shading. Soft shadows were implemented through the use of a disk light, using random sampling of the disk for distribution ray tracing. The ray object functionality is further leveraged to create mirrored objects using a recursion shading algorithm which had a depth of 10 bounces.
             </p>
 
@@ -62,7 +88,7 @@ const content = (
                         src={dragonRaytrace}
                         alt="Raytraced dragon Image"
                     />
-                    <p className="text-sm div-caption text-center">
+                    <p className="text-sm div-caption text-center  mt-1">
                         Both meshes and the floor have a high reflectance value creating a series of mirrored reflections.
                     </p>
                 </div>
@@ -72,7 +98,7 @@ const content = (
                         src={raytracingImg2}
                         alt="Second Raytracing Image"
                     />
-                    <p className="text-sm div-caption text-center">
+                    <p className="text-sm div-caption text-center mt-1">
                         Diffuse and specular shading. The floor has a high gloss factor softening the reflection of the spheres.
                     </p>
                 </div>
@@ -82,31 +108,33 @@ const content = (
         <div>
             <p className='text-lg font-semibold'> Instancing </p>
             <p>
-                The raytracer also utilizes for object instancing. This allows for
+                The ray tracer also utilizes for object instancing. This allows for
                 multiple copies of the same object to be drawn multiple times using a single copy of the object code. By transforming the ray with the inverse of the object's transformation matrix, you are able to render the object in a new transformation without having to actually transform the object's polygons saving a lot of extra multiplication.
             </p>
-            <img
-                className="img-project my-4"
-                src={instanceImg}
-                alt="Raytracing Image"
-            />
-            <p className="text-sm div-caption text-center">
-                This bunny is a 64k mesh instanced 7 times.
-            </p>
+            <div className=' my-4'>
+                <img
+                    className="img-project"
+                    src={instanceImg}
+                    alt="Raytracing Image"
+                />
+                <p className="text-sm div-caption text-center mt-1">
+                    This bunny is a 69k mesh instanced 7 times. Render time: 1.1s.
+                </p>
+            </div>
         </div>
 
-        <h3 className='mt-16'>Mesh Manipulation</h3>
+        <h3 className='mt-12'>Mesh Manipulation</h3>
         <p>
             These meshes are created using the <a className="underline" href="https://faculty.cc.gatech.edu/~jarek/papers/CornerTable.pdf" target='_blank'>corners mesh representation</a> by Jarek Rossignac. The corners method stores mesh connectivity data using the geometry, vertex and opposite tables. With this method traversing the mesh is simple using a series of mesh operations. The whole mesh can be visited using a simple traversal of BFS. Using this to traverse the mesh, I coded two different types of mesh subdivision algothims: loop and butterfly.
         </p>
-        <div className="flex items-center justify-center my-4">
+        <div className="grid grid-cols-3  mx-auto items-center my-4">
             <div className="div ">
                 <img className="img-project" src={meshImg} alt="Original Mesh" />
                 <p className="text-sm div-caption text-center">
                     Original Mesh
                 </p>
             </div>
-            <div className="div ">
+            <div className="">
                 <img
                     className="img-project"
                     src={loopSubImg}
@@ -133,7 +161,7 @@ const content = (
             traversing them to apply smoothing with the Laplacian and Taubin
             smoothing algorithms. Notice with the Taubin the mesh doesn't shrink as much as we alternate between using a negative and positive lambda value to shrink and grow the mesh between each smoothing iteration.
         </p>
-        <div className="flex items-center justify-center my-4">
+        <div className="grid grid-cols-3 items-center mx-auto my-4">
             <div className="div ">
                 <img
                     className="img-project"
@@ -166,7 +194,7 @@ const content = (
             </div>
         </div>
         <p></p>
-        <h3 className='mt-16 my-2'>Implicit Surfaces</h3>
+        <h3 className='mt-12 my-2'>Implicit Surfaces</h3>
         <p>
             For this project I created a variety of implicit surfaces and used the
             marching cubes algorithm to convert the surface to a rendered mesh.
@@ -178,7 +206,7 @@ const content = (
         <br></br>
         <p>I've previously used the metaball function in blender so it was very cool to be able to understand the math behind the functionality myself. Honestly very satisfying to be able to represent anything as simply a series of equations. </p>
         <div className="grid grid-cols-2 gap-x-6 gap-y-4 m-4">
-            <div className="div ">
+            <div className="div col-6">
                 <img
                     className="img-project aspect-square"
                     src={blobbySphereImg}
