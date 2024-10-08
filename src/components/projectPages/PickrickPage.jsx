@@ -13,7 +13,7 @@ import cafeImg from "../../assets/img/pickrick/pickrick_cafe.jpeg";
 import demoVid from "../../assets/img/pickrick/demo_vid.mp4";
 import usertest1 from "../../assets/img/pickrick/usertest1.jpg";
 import usertest2 from "../../assets/img/pickrick/usertest2.jpeg";
-import usertest3 from "../../assets/img/pickrick/usertest3.png";
+import usertest3 from "../../assets/img/pickrick/usertest3.jpeg";
 
 let videos = [
   wallVid,
