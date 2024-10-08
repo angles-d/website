@@ -8,9 +8,7 @@ export default function AboutMe() {
             <div className="grid grid-cols-5 gap-12 mt-24 items-center">
                 <div className="col-span-3 mr-3 ">
                     <h1 className="mb-8 text-4xl">About Me</h1>
-                    <p className=''>👋 Hey I'm Angela.
-                        <br></br>
-                        <br></br>
+                    <p className=''>
                         I'm a new grad from Georgia Tech with a masters in Computer Science. I'm interested in the
                         intersection between art and tech and how we can use it to produce novel creative experiences.
                         I've interned at companies such as the New York Times, NASA and Georgia Tech. I'm currently looking for a full time position.

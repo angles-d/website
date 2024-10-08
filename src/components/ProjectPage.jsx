@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from './NavBar';
 
 //team given in structure of [[Name, Job]]
@@ -49,6 +49,11 @@ export default function Page(props) {
     let team = createTeam(teamList);
     let formattedLinks = formatLinks(links);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
     return (
         <>
             {/* header */}
@@ -59,7 +64,6 @@ export default function Page(props) {
                         <h1 className="mb-6 text-5xl"> {projectTitle}</h1>
                         <h5 className="mb-2 text-2xl ">{date}</h5>
                         <p className="mb-6">
-                            {' '}
                             {projectType} | {toolsUsed}
                         </p>
                         {formattedLinks}

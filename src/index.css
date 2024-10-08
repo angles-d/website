@@ -6,8 +6,8 @@
   :root {
     font-size: 16px;
     /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-    @apply text-white bg-gray-800;
     --radius: 0.5rem;
+    background-color:#FEFEFE;
   }
 
   body {
@@ -25,23 +25,18 @@
     @apply font-medium;
   }
 
-  button {
-    @apply rounded-lg border border-transparent px-5 py-2.5 text-base font-medium bg-gray-900 cursor-pointer transition-colors duration-300 hover:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-300;
-  }
+ 
 }
 
 @layer utilities {
   @media (prefers-color-scheme: light) {
     :root {
-      @apply text-gray-800 bg-white;
+      @apply text-gray-800;
     }
 
     a:hover {
       @apply text-indigo-500;
     }
 
-    button {
-      @apply bg-gray-100;
-    }
   }
 }

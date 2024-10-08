@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar.jsx";
+import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuItem,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import { Button } from "./ui/button.jsx";
 
 // Importing images
 import pickrickImage from "../assets/img/pickrick/Pickrick.jpeg";
@@ -10,7 +18,7 @@ import mccloudImage from "../assets/img/mccloud/hubs.png";
 import animationImage from "../assets/img/animation/mocap_walking.gif";
 import compGraphicsImage from "../assets/img/compGraphics/sphere.png";
 import artImage from "../assets/img/art/art.jpg";
-import compPhotImage from "../assets/img/compPhotography/comp_phot.gif"
+import compPhotImage from "../assets/img/compPhotography/conway_slow.mp4"
 
 const words = ["ngela",
 	" Cat Photographer",
@@ -27,17 +35,15 @@ function Name(props) {
 	const [charIndex, setCharIndex] = useState(0);
 	const [isDeleting, setIsDeleting] = useState(false);
 	const typeDelay = 50;
-	const deleteDelay = 25;
-	const wordDelay = 1000;
+	const deleteDelay = 35;
+	const wordDelay = 2000;
 
 	useEffect(() => {
 		const handleFocus = () => {
-			console.log("window is focused");
 			setIsPlaying(true)
 		}
 
 		const handleBlur = () => {
-			console.log("window is blurred");
 			setIsPlaying(false)
 			setWordIndex(0);
 			setCharIndex(0);
@@ -54,7 +60,6 @@ function Name(props) {
 		};
 
 	}, [])
-
 
 	useEffect(() => {
 		if (isPlaying) {
@@ -95,7 +100,7 @@ function Name(props) {
 				<h1 className="whitespace-pre">{text}</h1>
 			</div>
 
-			<p className="mb-8 w-7/12 text-lg"> I'm a programmer interested in the intersection between art and tech and how we can use it to produce novel creative experiences. Currently looking for fulltime roles.
+			<p className="mb-8 w-7/12 text-lg"> I'm a programmer interested in how we can use tech to produce novel creative user experiences. Currently looking for fulltime roles.
 			</p>
 
 			<p className="mb-6" >
@@ -112,86 +117,147 @@ function Project(props) {
 				<div className="absolute inset-0 bg-black bg-opacity-40 z-10 opacity-0 transition-opacity duration-300 hover:opacity-100">
 					<div className="absolute inset-0 flex flex-col items-center justify-center text-white">
 						<h3 className="text-xl font-medium">{props.projectTitle}</h3>
-						<span className="text-sm">{props.projectType}</span>
+						<span className="text-sm capitalize">{props.projectType}{props.language ? " | " + props.language : ""} </span>
 					</div>
 				</div>
-				<img
-					className="w-full h-auto"
-					src={props.imageUrl}
-					alt={props.projectTitle}
-				/>
+
+				{props.imageUrl.slice(-3) != "mp4" ?
+					< img
+						className="w-full h-auto aspect-video"
+						src={props.imageUrl}
+						alt={props.projectTitle}
+					/>
+					: <video
+						className="w-full h-auto"
+						src={props.imageUrl}
+						alt={props.projectTitle}
+						autoPlay
+						loop
+						muted
+					/>
+				}
 			</a>
 		</div>
 	);
 }
 
+const projectList = [
+	{
+		projectTitle: "Computer Graphics Projects",
+		projectUrl: "./#/project/computer-graphics-projects",
+		imageUrl: compGraphicsImage,
+		projectType: "class",
+		projectAttrs: ["class", "graphics"],
+		language: "Java",
+	},
+	{
+		projectTitle: "Animation Projects",
+		projectUrl: "./#/project/animation-projects",
+		imageUrl: animationImage,
+		language: "Python",
+		projectAttrs: ["class", "graphics"],
+		projectType: "class"
+	},
+	{
+		projectTitle: "Computational Photography Projects",
+		projectUrl: "./#/project/comp-photography-projects",
+		imageUrl: compPhotImage,
+		language: "Python",
+		projectAttrs: ["class", "graphics"],
+		projectType: "class"
+	},
+	{
+		projectTitle: "The Pickrick Protests",
+		projectUrl: "./#/project/pickrick-protests",
+		imageUrl: pickrickImage,
+		language: "C#",
+		projectAttrs: ["XR"],
+		projectType: "XR"
+	},
+	{
+		projectTitle: "The Georgia Tech Archives",
+		projectUrl: "./#/project/archives",
+		imageUrl: archivesImage,
+		language: "C#",
+		projectAttrs: ["XR"],
+		projectType: "XR"
+	},
+	{
+		projectTitle: "Let's Build!",
+		projectUrl: "./#/project/lets-build",
+		imageUrl: letsbuildImage,
+		language: "C#",
+		projectAttrs: ["XR"],
+		projectType: "XR"
+	},
+	{
+		projectTitle: "Modeling The Hive",
+		projectUrl: "./#/project/hive",
+		imageUrl: hiveImage,
+		language: "C#, Blender",
+		projectAttrs: ["XR", "graphics"],
+		projectType: "XR"
+	},
+	{
+		projectTitle: "McCloud Pyramid",
+		projectUrl: "./#/project/mccloud",
+		imageUrl: mccloudImage,
+		language: "JS",
+		projectAttrs: ["XR"],
+		projectType: "XR"
+	},
+	{
+		projectTitle: "Art",
+		projectUrl: "./#/art",
+		imageUrl: artImage,
+		projectAttrs: [],
+		language: "",
+		projectType: "Mixed Media"
+	}
+];
+
+
+const filters = ["all", "class", "graphics", "XR"]
+
 export default function Home() {
+	const [filter, setFilter] = useState("all");
 	return (
-		<div className="container mx-auto w-9/12">
+		<div className="container mx-auto w-9/12 ">
 			<NavBar />
 			<Name />
-			<div id="projects" className="">
-				<p className="text-3xl py-6">Projects</p>
+			<div id="projects" className="pb-16">
+				<div className="flex items-center">
+					<p className="text-3xl my-6">Projects</p>
+					<NavigationMenu className="z-30 mx-4 ">
+						<NavigationMenuList>
+							<NavigationMenuItem>
+								<NavigationMenuTrigger className="capitalize bg-transparent">{filter}</NavigationMenuTrigger>
+								<NavigationMenuContent>
+									{filters.filter(f => f != filter).map((f, i) => {
+										return <Button key={i} variant="link" className="capitalize ml-1 mr-2" onClick={() => {
+											setFilter(f)
+										}}>{f}</Button>
+									})}
+								</NavigationMenuContent>
+							</NavigationMenuItem>
+						</NavigationMenuList>
+					</NavigationMenu>
+				</div>
+
 				<div className="grid grid-cols-2 gap-8  mx-auto">
-
-					<Project
-						projectTitle="Computer Graphics Projects"
-						projectUrl="./#/project/computer-graphics-projects"
-						imageUrl={compGraphicsImage}
-						projectType="Class | Java"
-						className="row-start-2"
-					/>
-					<Project
-						projectTitle="Animation Projects"
-						projectUrl="./#/project/animation-projects"
-						imageUrl={animationImage}
-						projectType="Class | Python"
-					/>
-					<Project
-						projectTitle="Computational Photography Projects"
-						projectUrl="./#/project/comp-photography-projects"
-						imageUrl={compPhotImage}
-						projectType="Class | Python"
-					/>
-					<Project
-						projectTitle="The Pickrick Protests"
-						projectUrl="./#/project/pickrick-protests"
-						imageUrl={pickrickImage}
-						projectType="AR | C#"
-					/>
-
-					<Project
-						projectTitle="The Georgia Tech Archives"
-						projectUrl="./#/project/archives"
-						imageUrl={archivesImage}
-						projectType="VR | C#"
-					/>
-					<Project
-						projectTitle="Let's Build!"
-						projectUrl="./#/project/lets-build"
-						imageUrl={letsbuildImage}
-						projectType="AR | C#"
-					/>
-					<Project
-						projectTitle="Modeling The Hive"
-						projectUrl="./#/project/hive"
-						imageUrl={hiveImage}
-						projectType="VR | Blender & C#"
-					/>
-					<Project
-						projectTitle="McCloud Pyramid"
-						projectUrl="./#/project/mccloud"
-						imageUrl={mccloudImage}
-						projectType="AR | JS"
-					/>
-					<Project
-						projectTitle="Art"
-						projectUrl="./#/art"
-						imageUrl={artImage}
-						projectType="Mixed Media"
-					/>
+					{projectList.filter((p) => filter == 'all' ? p : p.projectAttrs.includes(filter)).map((project, index) => (
+						<Project
+							key={index}
+							projectTitle={project.projectTitle}
+							projectUrl={project.projectUrl}
+							imageUrl={project.imageUrl}
+							language={project.language}
+							projectType={project.projectType}
+							className={project.className}
+						/>
+					))}
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 }

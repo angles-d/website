@@ -5,7 +5,7 @@ const content = [
   <p> Lets Build! is a block-based multiplayer AR application that allows users to collaboratively build structures, memories, and endless amounts of chaos built for HackGT9.
   </p>,
   <div className="w-full h-auto">
-    <iframe className="w-full aspect-video p-4" src="https://www.youtube.com/embed/tW86dV27mk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe className="w-full aspect-video p-4" src="https://www.youtube.com/embed/tW86dV27mk8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
   </div>,
   <br />,
   <p className="mb-0">Lets Build creates a virtual AR sandbox playground where the children can build together with blocks. Nearby users will be able to influence each other's space and view and interact with each other's block additions. Each user is assigned a unique block color and must collaborate with the others to create and design the scene.
