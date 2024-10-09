@@ -18,6 +18,7 @@ import hiveImage from "../assets/img/hive/hive.png";
 import letsbuildImage from "../assets/img/letsbuild/letsbuild.png";
 import mccloudImage from "../assets/img/mccloud/hubs.png";
 import pickrickImage from "../assets/img/pickrick/Pickrick.jpeg";
+import catImage from "../assets/img/cats/home-img.jpg";
 
 const words = ["ngela",
 	" Cat Photographer",
@@ -92,7 +93,7 @@ function Name(props) {
 	}, [charIndex, isDeleting, isPlaying]);
 
 	return (
-		<div className="mt-48 mb-36">
+		<div className="mt-48 mb-36 ">
 			<div className="text-5xl mt-16 mb-8 flex"
 			>
 				<h1 >Hey, I'm A</h1>
@@ -146,7 +147,7 @@ const projectList = [
 		projectUrl: "./#/project/computer-graphics-projects",
 		imageUrl: compGraphicsImage,
 		projectType: "class",
-		projectAttrs: ["class", "graphics"],
+		projectAttrs: ["all", "class", "graphics"],
 		language: "Java",
 	},
 	{
@@ -154,7 +155,7 @@ const projectList = [
 		projectUrl: "./#/project/animation-projects",
 		imageUrl: animationImage,
 		language: "Python",
-		projectAttrs: ["class", "graphics"],
+		projectAttrs: ["all", "class", "graphics"],
 		projectType: "class"
 	},
 	{
@@ -162,7 +163,7 @@ const projectList = [
 		projectUrl: "./#/project/comp-photography-projects",
 		imageUrl: compPhotImage,
 		language: "Python",
-		projectAttrs: ["class", "graphics"],
+		projectAttrs: ["all", "class", "graphics"],
 		projectType: "class"
 	},
 	{
@@ -170,7 +171,7 @@ const projectList = [
 		projectUrl: "./#/project/pickrick-protests",
 		imageUrl: pickrickImage,
 		language: "C#",
-		projectAttrs: ["XR"],
+		projectAttrs: ["all", "XR"],
 		projectType: "XR"
 	},
 	{
@@ -178,7 +179,7 @@ const projectList = [
 		projectUrl: "./#/project/lets-build",
 		imageUrl: letsbuildImage,
 		language: "C#",
-		projectAttrs: ["XR"],
+		projectAttrs: ["all", "XR"],
 		projectType: "XR"
 	},
 	{
@@ -186,7 +187,7 @@ const projectList = [
 		projectUrl: "./#/project/hive",
 		imageUrl: hiveImage,
 		language: "C#, Blender",
-		projectAttrs: ["XR", "graphics"],
+		projectAttrs: ["all", "XR", "graphics"],
 		projectType: "XR"
 	},
 	{
@@ -194,21 +195,28 @@ const projectList = [
 		projectUrl: "./#/project/mccloud",
 		imageUrl: mccloudImage,
 		language: "JS",
-		projectAttrs: ["XR"],
+		projectAttrs: ["all", "XR"],
 		projectType: "XR"
 	},
 	{
 		projectTitle: "Art",
 		projectUrl: "./#/art",
 		imageUrl: artImage,
-		projectAttrs: [],
+		projectAttrs: ["all", "misc"],
 		language: "",
 		projectType: "Mixed Media"
+	}, {
+		projectTitle: "Cats!",
+		projectUrl: "./#/cats",
+		imageUrl: catImage,
+		projectAttrs: ["misc"],
+		language: "",
+		projectType: "Photography"
 	}
 ];
 
 
-const filters = ["all", "class", "graphics", "XR"]
+const filters = ["all", "class", "graphics", "XR", "misc"]
 
 export default function Home() {
 	const [filter, setFilter] = useState("all");
@@ -236,7 +244,7 @@ export default function Home() {
 				</div>
 
 				<div className="grid grid-cols-2 gap-8  mx-auto">
-					{projectList.filter((p) => filter == 'all' ? p : p.projectAttrs.includes(filter)).map((project, index) => (
+					{projectList.filter((p) => p.projectAttrs.includes(filter)).map((project, index) => (
 						<Project
 							key={index}
 							projectTitle={project.projectTitle}

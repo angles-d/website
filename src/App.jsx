@@ -12,6 +12,7 @@ import LetsBuildPage from "./components/projectPages/LetsBuildPage.jsx"
 import AnimationProjectsPage from "./components/projectPages/AnimationProjects.jsx"
 import CompGraphicsProjectsPage from "./components/projectPages/ComputerGraphicsProjects.jsx"
 import CompPhotographyPage from './components/projectPages/CompPhotographyProjects.jsx';
+import CatPage from './components/projectPages/CatsPage.jsx';
 
 import { HashRouter, Routes, Route } from "react-router-dom";
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="project/animation-projects" element={<AnimationProjectsPage />} />
         <Route exact path="project/computer-graphics-projects" element={<CompGraphicsProjectsPage />} />
         <Route exact path="project/comp-photography-projects" element={<CompPhotographyPage />} />
+        <Route exact path="/cats" element={<CatPage />} />
       </Routes>
     </HashRouter>
   </>
