@@ -20,7 +20,7 @@ const content = (
 
         <h3 className='mt-8 my-2'>Splines & Integrators</h3>
         <p>
-            The first few projects were centered around using splines and integrators for keyframe animation. We used the matrices and control points to encode Bezier, Hermite, B-spline and Catmull-Rom curves. Analyzing the differences and advantages of each curve.
+            The first few projects were centered around using splines and integrators for keyframe animation. We used the matrices and control points to encode Bezier, Hermite, B-spline and Catmull-Rom curves, analyzing the differences and advantages of each curve.
         </p>
         <img
             className="img-project w-8/12"
@@ -28,7 +28,7 @@ const content = (
             alt="Splines Animation"
         />
         <p>
-            Likewise for integrators, we first created a closed physics system allowing for free fall simulation. Then we coded 3 types of interpolation methods (Explicit Euler, Midpoint, and RK-4) using the analytical solution as a control.
+            Likewise for integrators, we first created a closed physics system allowing for free fall simulation. We then coded 3 types of interpolation methods (Explicit Euler, Midpoint, and RK-4) using the analytical solution as a control for comparison.
         </p>
 
         <div className='grid grid-cols-7 my-4 gap-1 items-end'>
@@ -82,7 +82,7 @@ const content = (
             alt="Inverse Kinematics Animation"
         />
         <p>
-            Georgia Tech also has a mocap studio, so we were able to mocap ourselves and use the data recorded by the system to create an animation of our own motion. Below is an animation of me doing a cartwheel! I'm honestly impressed that the animation turned out decent as I only wore sensors on  my hands and feet.
+            Georgia Tech also has a mocap studio, so we were able to mocap ourselves and use the recorded data to create an animation of our own motion. Below is an animation of me doing a cartwheel! I'm honestly impressed that the animation turned out decent as I only wore sensors on  my hands and feet.
         </p>
         <img
             className="img-project mt-4 w-9/12 mb-24"

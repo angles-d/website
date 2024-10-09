@@ -26,7 +26,7 @@ const content = (
         </p>
         <h3 className='mt-8 my-2'>Ray Tracer </h3>
         <p>
-            A ray tracer is a rendering method which uses ray-object intersections to detect and render objects. The ray intersection method allows for a more realistic rendering of the scene especially for shadows and shiny surfaces. By tracking the rays intersections as it bounces through the scene like rays of light allowing for a more nuanced rendering than classic rasterization.
+            A ray tracer is a rendering method which uses ray-object intersections to detect and render objects. The ray intersection method allows for a more realistic rendering of the scene especially for those with lots of shadows and shiny surfaces. By tracking the ray's intersection hits as it bounces through the scene, we can capture a more nuanced rendering than classic rasterization (ex: caustics, reflections, etc).
             <div>
                 <img
                     className="img-project my-4"
@@ -36,18 +36,15 @@ const content = (
             </div>
 
             This ray tracer is coded from scratch, including the implementation
-            of scene primitives such as rays, triangles, and lights and
-            functionality such as matrix transformations. This ray tracer
-            implements phong shading to allow for specular highlights and distribution raytracing for soft shadows. It also has a variety of visual effects such as depth of field and motion blur.
+            of scene primitives such as rays, triangles, and lights. I also coded the fundamental operations such as matrix transformations. This ray tracer also implements phong shading to allow for specular highlights and distribution ray tracing for soft shadows and other effects (ex: glossy surfaces). It additionally has a variety of visual effects such as depth of field and motion blur.
         </p>
         <br></br>
         <div>
             <p className='text-lg font-semibold'> Acceleration </p>
             <p>
-                This ray tracer uses a bounding volume hierarchy to speed up ray tracing. Due to the binary nature of the BVH tree structure, the runtime for scenes increases logarithmically instead of linearly per polygon, allowing a mesh with 69k polygons to take less than 1.5x the time of a mesh with a 500 polygons despite having 138x the number polygons to test against.
+                This ray tracer uses a bounding volume hierarchy to speed up ray tracing process. Due to the binary nature of the BVH tree structure, the runtime for scenes increases logarithmically instead of linearly per the number of objects in the scene. This allows a mesh with 69k polygons to take less than 1.5x the time of a mesh with a 500 polygons despite having 138x the number objects to test against.
 
-                By using this acceleration structure, the rendering time is reduced
-                significantly. This allows the rendering of scenes with many objects, even with effects such as mirroring or soft shadows which further increase the ray intersection count.
+                By using this acceleration structure, the rendering time is reduced significantly. This allows the rendering of scenes with many objects, even with effects such as mirroring or soft shadows which further increase the ray intersection count.
             </p>
             <div className="my-4 gap-3 grid grid-cols-2">
                 <div>
@@ -77,8 +74,7 @@ const content = (
         <div>
             <p className='text-lg font-semibold'> Shading </p>
             <p>
-                This ray tracer implements Phong shading to allow for both specular
-                highlights and diffuse shading. Soft shadows were implemented through the use of a disk light, using random sampling of the disk for distribution ray tracing. The ray object functionality is further leveraged to create mirrored objects using a recursion shading algorithm which had a depth of 10 bounces.
+                This ray tracer implements Phong shading to allow for both specular highlights and diffuse shading. Soft shadows were implemented through the use of a disk light, using random sampling of the disk light. The ray object functionality is further leveraged to create mirrored objects using a recursion shading algorithm which had a depth of 10 bounces.
             </p>
 
             <div className="my-4 gap-3 grid grid-cols-2">
@@ -108,8 +104,7 @@ const content = (
         <div>
             <p className='text-lg font-semibold'> Instancing </p>
             <p>
-                The ray tracer also utilizes for object instancing. This allows for
-                multiple copies of the same object to be drawn multiple times using a single copy of the object code. By transforming the ray with the inverse of the object's transformation matrix, you are able to render the object in a new transformation without having to actually transform the object's polygons saving a lot of extra multiplication.
+                The ray tracer also utilizes for object instancing. This allows for multiple copies of the same object to be drawn multiple times using a single copy of the object in code. By transforming the ray with the inverse of the object's transformation matrix, we are able to render the object in a new transformation without having transform the object's polygons saving a lot of extra multiplication.
             </p>
             <div className=' my-4'>
                 <img
@@ -125,7 +120,7 @@ const content = (
 
         <h3 className='mt-12'>Mesh Manipulation</h3>
         <p>
-            These meshes are created using the <a className="underline" href="https://faculty.cc.gatech.edu/~jarek/papers/CornerTable.pdf" target='_blank'>corners mesh representation</a> by Jarek Rossignac. The corners method stores mesh connectivity data using the geometry, vertex and opposite tables. With this method traversing the mesh is simple using a series of mesh operations. The whole mesh can be visited using a simple traversal of BFS. Using this to traverse the mesh, I coded two different types of mesh subdivision algothims: loop and butterfly.
+            These meshes are created using the <a className="underline" href="https://faculty.cc.gatech.edu/~jarek/papers/CornerTable.pdf" target='_blank'>corners mesh representation</a> by Jarek Rossignac. The corners method stores mesh connectivity data using the geometry, vertex and opposite tables. With this method traversing the mesh is simple using a series of mesh operations and Depth First Search (DFS). Using this mesh traversal method, I coded two different types of mesh subdivision algorithms: loop and butterfly.
         </p>
         <div className="grid grid-cols-3  mx-auto items-center my-4">
             <div className="div ">
@@ -159,7 +154,7 @@ const content = (
         <p>
             With these subdivided meshes, we can then use similar methods of
             traversing them to apply smoothing with the Laplacian and Taubin
-            smoothing algorithms. Notice with the Taubin the mesh doesn't shrink as much as we alternate between using a negative and positive lambda value to shrink and grow the mesh between each smoothing iteration.
+            algorithms. Notice with the Taubin the mesh doesn't shrink as much as we alternate between using a negative and positive lambda value to shrink and grow the mesh between each smoothing iteration.
         </p>
         <div className="grid grid-cols-3 items-center mx-auto my-4">
             <div className="div ">
@@ -196,15 +191,11 @@ const content = (
         <p></p>
         <h3 className='mt-12 my-2'>Implicit Surfaces</h3>
         <p>
-            For this project I created a variety of implicit surfaces and used the
-            marching cubes algorithm to convert the surface to a rendered mesh.
-            With these surfaces I implemented effects such as blobby meshes
-            using the wyvil distance function, distance based coloring mixing,
-            and created my own flower mesh out of a combination of various
+            For this project I created a variety of implicit surfaces and used the marching cubes algorithm to convert the surface to a rendered mesh. With these surfaces I implemented effects such as blobby meshes using the wyvil distance function and distance-based coloring mixing. I also created my own flower mesh out of a combination of various
             distance functions.
         </p>
         <br></br>
-        <p>I've previously used the metaball function in blender so it was very cool to be able to understand the math behind the functionality myself. Honestly very satisfying to be able to represent anything as simply a series of equations. </p>
+        <p>I've previously used the metaballs in Blender so it was very cool to be able to understand the math behind them. It's very satisfying to be able to represent anything as simply a series of equations. </p>
         <div className="grid grid-cols-2 gap-x-6 gap-y-4 m-4">
             <div className="div col-6">
                 <img
@@ -252,7 +243,7 @@ const content = (
 );
 
 const links = [
-    ['Github', 'https://github.com/angles-d/Computer-Graphics-Projects']
+    ['Github', 'https://github.com/angles-d/grad-graphics-projects']
 ];
 
 const pageInfo = {

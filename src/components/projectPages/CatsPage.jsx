@@ -1,4 +1,5 @@
 import NavBar from "../NavBar.jsx";
+import { useEffect } from "react";
 
 const cats = import.meta.glob('../../assets/img/cats/cat*.{png,jpg}', { eager: true, query: '?url', import: 'default' });
 import cowImage from "../../assets/img/cats/cow-harold.png";

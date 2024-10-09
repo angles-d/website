@@ -53,6 +53,7 @@ let content = (<>
   At the site now stands a memorial plaza to the protests.
   <p />
   <img className="img-project m-4 mb-10" src={ecoImg} />
+
   {/* Development */}
   <h3 className="my-2">Design & Development </h3>
   <p >
@@ -93,7 +94,7 @@ let content = (<>
     architecture. By anchoring these cards physically to planes instead of using
     a HMD screen, we were able to reduce the text jitter/movement and create a
     better reading experience for the user. I implemented this interaction using
-    colliders to determine the user's position and AR raycasts to detect and
+    colliders to determine the user's position and AR ray casts to detect and
     track the physical planes.
   </p>
   {/* AR UI slideshow */}
